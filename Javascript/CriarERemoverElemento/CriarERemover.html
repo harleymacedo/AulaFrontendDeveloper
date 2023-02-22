@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p id="p1">Meu paragrafo</p>
+  <input type="button" value="adicionar" onclick="adicionarElemento()" />
+  <input type="button" value="remover" onclick="removerElemento()" />
+  <div id="div1">
+    
+  </div>
+  <script>
+    function adicionarElemento() {
+      let novoElemento = document.createElement("p");
+      novoElemento.textContent = "Novo paragrafo";
+      document.getElementById("div1").appendChild(novoElemento);
+    }
+
+    function removerElemento() {
+      let p1 = document.getElementById("p1");
+      p1.remove();
+    }
+  </script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
