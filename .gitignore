@@ -1,1 +1,6 @@
-DS_Store/
+/Reactjs/*/node_modules
+/Reactjs/*/.env
+/ReactNative/*/node_modules
+/ReactNative/*/.env
+
+.DS_Store/
