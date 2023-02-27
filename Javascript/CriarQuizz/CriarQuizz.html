@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Quizz</title>
+    <script>
+        var numPerguntas = 0;
+        function adicionarPergunta() {
+            numPerguntas++;
+            var novoElemento = document.createElement('input');
+            novoElemento.type = 'text';
+            var novoP = document.createElement('p')
+            novoP.innerText = 'Pergunta ' + numPerguntas;
+            novoP.appendChild(novoElemento);
+            var divPerguntas = document.querySelector('#divPerguntas');
+            divPerguntas.appendChild(novoP);
+        }
+    </script>
+
+    <style>
+        #divCabecalho{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: coral;
+            height: 15%;
+            text-align: center;
+        }
+
+        #botao1 {
+            height: 50px;
+            width: 150px;
+            font-size: 12pt;
+        }
+
+        #divPerguntas {
+            background-color: cornflowerblue;
+        }
+
+        input{
+            height: 40px;
+            width: 250px;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <div id="divCabecalho">
+        <h3>Criando seu Quizz</h3>
+        <button id="botao1" onclick="adicionarPergunta()">Adicionar pergunta</button>
+    </div>
+        
+    <div id="divPerguntas">
+
+    </div>
+</body>
+</html>

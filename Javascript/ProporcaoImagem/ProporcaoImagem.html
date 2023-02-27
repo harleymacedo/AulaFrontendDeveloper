@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proporção de imagem</title>
+    <style>
+        img {
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+    <script>
+        function alterarImagem() {
+            let valor = document.querySelector('#n1').value
+            let resolucaoAtual = 80
+            console.log(resolucaoAtual)
+            if (valor > 0) {
+                document.querySelector('#img1').style.height = (resolucaoAtual * valor) + 'px'
+                document.querySelector('#img1').style.width = (resolucaoAtual * valor) + 'px'
+            } else if (valor < 0) {
+                valor = Math.abs(valor)
+                document.querySelector('#img1').style.height = (resolucaoAtual / valor) + 'px'
+                document.querySelector('#img1').style.width = (resolucaoAtual / valor) + 'px'
+            } else {
+                alert('Valor inválido')
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><input type="number" value="1" id="n1" onchange="alterarImagem()" /></p>
+    <img src="imagem1.png" id="img1" />
+</body>
+</html>

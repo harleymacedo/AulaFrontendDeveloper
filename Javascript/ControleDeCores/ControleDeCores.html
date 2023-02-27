@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intensidade-cores</title>
+    <script>
+        function mudarCor() {
+            let numero = document.getElementById('range1').value 
+            document.body.style.backgroundColor = "#0" + numero + "0"
+        }
+    </script>
+</head>
+<body>
+    1<input type="range" min="1" max="9" value="8" onChange="mudarCor()" id="range1" />9
+</body>
+</html>
