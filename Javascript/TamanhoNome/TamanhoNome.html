@@ -6,10 +6,10 @@
     <title>Event onChange</title>
     <script>
         function verificaTamanho() {
-            var entrada = document.querySelector('#entrada1')
+            var entrada = document.getElementById('entrada1')
             var texto = entrada.value
             var qtdCaracteres = texto.length
-            var span = document.querySelector('#span1')
+            var span = document.getElementById('span1')
             if (qtdCaracteres >= 6) {
                 span.innerHTML = '<img src="https://img.icons8.com/office/30/000000/ok.png"/>'
             } else {
