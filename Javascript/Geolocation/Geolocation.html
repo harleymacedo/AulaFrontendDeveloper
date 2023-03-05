@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Geolocation</h2>
+<p>Clique no botão para visualizar suas coordenadas.</p>
+
+<button onclick="getLocation()">Ver agora</button>
+
+<p >Latitude: <span id="span1"></span></p>
+<p >Longitude: <span id="span2"></span></p>
+
+<script>
+
+function getLocation() {
+    console.log('Vai pegar posicao');
+    if (navigator.geolocation) {
+        let posicao = navigator.geolocation.getCurrentPosition(exibirPosicao);
+    } else { 
+        x.innerHTML = "Browser sem suporte para geolocalização.";
+    }
+}
+
+function exibirPosicao (posicao) {
+    document.getElementById("span1").innerHTML = posicao.coords.latitude;
+    document.getElementById("span2").innerHTML = posicao.coords.longitude;
+}
+
+</script>
+
+</body>
+</html>
