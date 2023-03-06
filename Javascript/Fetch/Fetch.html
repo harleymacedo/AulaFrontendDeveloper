@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch exemplo</title>
+</head>
+<body>
+    <h2>Ver cotação de moedas</h2>
+    <button onclick="verCotacao()" >Ver agora</button>
+    <p id="p1" ></p>
+    <script>
+        async function verCotacao () {
+            let url = 'https://economia.awesomeapi.com.br/last/USD-BRL';
+            let result = await fetch(url);
+            let dado = await result.json();
+            document.getElementById('p1').textContent = dado.USDBRL.bid;
+        }
+    </script>
+</body>
+</html>
