@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Geracão de Senhas</title>
+</head>
+<body>
+    <h3>Gerador de senhas</h3>
+    <button onclick="gerarSenha()" >Gerar</button>
+    <p id="p1"></p>
+    <script>
+        var alfabeto = ['a', 'e', 'i', 'o', 'u', '1', '2', '3', '4', '5'];
+        function gerarSenha() {
+            let senha = '';
+            for (let i = 1; i <= 8; i++) {
+                let num = Math.floor(Math.random() * 9);
+                console.log(num);
+                senha += alfabeto[num];
+            }
+            document.getElementById('p1').textContent = senha;
+        }
+    </script>
+</body>
+</html>
