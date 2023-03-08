@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino adicionar divs</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="adicionarDiv()" >Adicionar</button>
+    <script>
+        var cores = ['red', 'green', 'yellow', 'silver', 'gray', 'orange'];
+
+        function adicionarDiv () {
+            let novoElemento = document.createElement('div');
+            novoElemento.contentEditable = true;
+            novoElemento.style.backgroundColor = cores[Math.floor(Math.random() * 6)];
+            document.body.appendChild(novoElemento);
+        }
+    </script>
+</body>
+</html>
