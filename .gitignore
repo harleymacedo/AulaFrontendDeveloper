@@ -3,4 +3,4 @@
 /ReactNative/*/node_modules
 /ReactNative/*/.env
 
-.DS_Store/
+.DS_Store
