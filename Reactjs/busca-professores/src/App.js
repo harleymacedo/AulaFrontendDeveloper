@@ -1,20 +1,12 @@
+//Importar o css e os componentes agregados
 import './App.css';
+import Busca from './components/Busca';
 
-function App() {
-
-  const buscarProfessores = async () => {
-    const url = 'https://node-express-api-rest-mock.vercel.app/professor/todos';
-    const result = await fetch(url);
-    const dados = await result.json();
-    let divResultado = document.getElementById('divResultado');
-    // dados.forEach( (dadoAtual) => {
-    //     divResultado.innerHTML += `<div class="divCard">${dadoAtual.nome}</div>`;
-    // });
-  }
+const App = () => {
 
   return (
     <div className="App">
-      <button onClick={buscarProfessores}>Buscar professores</button>
+      <Busca />
     </div>
   );
 }
