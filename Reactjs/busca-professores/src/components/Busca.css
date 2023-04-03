@@ -1,5 +1,10 @@
-.divBusca {
+.temaDark {
     background-color: gray;
+    height: 200px;
+}
+
+.temaClaro {
+    background-color: silver;
     height: 200px;
 }
 

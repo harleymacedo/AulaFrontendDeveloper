@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Busca />
+      <Busca tema="temaDark" />
     </div>
   );
 }
