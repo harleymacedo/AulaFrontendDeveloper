@@ -13,7 +13,6 @@ const Busca = (props) => {
         const result = await axios.get(url);
         const dados = result.data;
         setProfessores(dados);
-        
     }
 
     return (
