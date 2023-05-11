@@ -2,5 +2,7 @@
 /Reactjs/*/.env
 /ReactNative/*/node_modules
 /ReactNative/*/.env
+/NextJS/*/node_modules
+/NextJS/*/.env
 
 .DS_Store
