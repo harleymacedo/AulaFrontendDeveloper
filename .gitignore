@@ -1,7 +1,7 @@
-/Reactjs/*/node_modules
-/Reactjs/*/.env
-/ReactNative/*/node_modules
-/ReactNative/*/.env
+/Aula4Reactjs/*/node_modules
+/Aula4Reactjs/*/.env
+/Aula5ReactNative/*/node_modules
+/Aula5ReactNative/*/.env
 /NextJS/*/node_modules
 /NextJS/*/.env
 
