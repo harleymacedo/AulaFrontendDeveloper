@@ -6,21 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Header 1</h1>
 
+    <!-- Parágrafo e cabeçalho -->
+    <h1>Header 1</h1>
     <p>Parágrafo 1 </p>
 
+    <!-- Uso de lista -->
     <ul>
         <li>Item</li>
         <li>Item</li>
     </ul>
 
+    <!-- Uso de links -->
     <a href="http://www.ifce.edu.br" >Link 1</a>
     <a href="#" >Link 2</a>
     <a href="./relatorio.docx">Link 3</a>
 
-    <img src="./imagem1.png" />
+    <!-- Uso de imagem -->
+    <img src="./imagem1.png" alt="Imagem de um pássaro" />
 
+    <!-- Uso de tabela -->
     <table>
         <tr>
             <td>Dado 1</td> <td>Dado 2</td>
@@ -29,5 +34,12 @@
             <td>Dado 3</td> <td>Dado 4</td>
         </tr>
     </table>
+
+    <!-- Formulário e seus itens -->
+    <form method="GET" action="/recebeDados">
+        <p> <input type="text" placeholder="Nome" /> </p>
+        <p> <input type="text" placeholder="Telefone" /> </p>
+        <p> Aceito os termos <input type="checkbox" value="aceito" /> </p>
+    </form>
 </body>
 </html>
