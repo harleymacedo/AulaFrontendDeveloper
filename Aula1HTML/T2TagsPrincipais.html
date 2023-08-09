@@ -23,7 +23,7 @@
     <a href="./relatorio.docx">Link 3</a>
 
     <!-- Uso de imagem -->
-    <img src="./imagem1.png" alt="Imagem de um pássaro" />
+    <p> <img src="./imagem1.png" alt="Imagem de uma nuvem para upload" /> </p>
 
     <!-- Uso de tabela -->
     <table>
@@ -39,7 +39,16 @@
     <form method="GET" action="/recebeDados">
         <p> <input type="text" placeholder="Nome" /> </p>
         <p> <input type="text" placeholder="Telefone" /> </p>
+        <p> <input type="radio" name="habilitado" value="Habilitado" /> Habilitado </p>
+        <p> <input type="radio" name="habilitado" value="NaoHabilitado" /> Não habilitado </p>
+        <select>
+            <option>Tipo 1</option>
+            <option>Tipo 2</option>
+        </select>
         <p> Aceito os termos <input type="checkbox" value="aceito" /> </p>
+        <p> <textarea rows="10" cols="30"> </textarea> </p>
+        <p> <input type="button" value="Validar" /> </p>
+        <p> <input type="submit" value="Enviar" /> </p>
     </form>
 </body>
 </html>
