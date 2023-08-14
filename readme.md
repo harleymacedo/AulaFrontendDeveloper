@@ -19,7 +19,12 @@
         <ol>
             <li>Sintaxe básica</li>
             <li>Seletores</li>
+            <li>Texto, tabela e bordas</li>
+            <li>Margin e padding</li>
+            <li>Div e layout básico</li>
             <li>Bootstrap</li>
+            <li>Grid system</li>
+            <li>Flexbox</li>            
         </ol>
     <li>Aula 3: Javascript</li>
         <ol>
