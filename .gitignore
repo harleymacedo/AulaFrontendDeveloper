@@ -1,8 +1,6 @@
-/Aula4Reactjs/*/node_modules
-/Aula4Reactjs/*/.env
-/Aula5ReactNative/*/node_modules
-/Aula5ReactNative/*/.env
-/NextJS/*/node_modules
-/NextJS/*/.env
+/Aula5Reactjs/*/node_modules
+/Aula5Reactjs/*/.env
+/Aula7ReactNative/*/node_modules
+/Aula7ReactNative/*/.env
 
 .DS_Store
