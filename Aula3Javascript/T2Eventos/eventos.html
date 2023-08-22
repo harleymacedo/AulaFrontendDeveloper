@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function exemploClick() {
+            alert('Exemplo de OnClick')
+        }
+        function exemploMouseUp() {
+            alert('Exemplo de OnMouseUp')
+        }
+        function exemploMouseOut() {
+            alert('Exemplo de OnMouseOut')
+        }
+        function exemploBlur() {
+            alert('Exemplo de OnBlur')
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Button1" 
+        onclick="exemploClick()" 
+        onmouseout="exemploMouseOut()" 
+        onmouseenter="exemploMouseUp()"
+    />
+    <textarea rows="10" cols="40" onblur="exemploBlur()"></textarea>
+</body>
+</html>
