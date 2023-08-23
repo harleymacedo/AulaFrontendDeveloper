@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proporcao de árvores</title>
+    <script>
+        function calcular() {
+            var quadras = parseInt(document.getElementById("area").value)
+            var qtdArvores = quadras * 16
+            document.getElementById("resultado").innerHTML = qtdArvores
+
+            var div1 = document.getElementById("div1")
+            for (i = 0; i <= qtdArvores; i++) {
+                div1.innerHTML = div1.innerHTML + "<img src='arvore.png' />" + i
+                if (i % 50 === 0) {
+                    div1.innerHTML = div1.innerHTML + "<br>"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p> Número de quadras no bairro: <input type="text" id="area" /> </p>
+    <button onclick="calcular()" >Calcular</button>
+    <p id="resultado"></p>
+    <div id="div1" class="div1">
+        
+    </div>
+</body>
+</html>

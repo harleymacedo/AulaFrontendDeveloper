@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume do cilindro</title>
+    <script>
+        function calcularVolume() {
+            const pi = 3.14
+            var h = document.querySelector('#altura').value;
+            var r = document.querySelector('#raio').value;
+            var resultado = pi * (r * r) * h;
+            document.querySelector('#resultado').value = resultado;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>Altura do cilindro: <input type="text" id="altura" /></p>
+        <p>Raio do cilindro: <input type="text" id="raio" /></p>
+        <p> <input type="button" value="Calcular" onclick="calcularVolume()" /> </p>
+        <p>Resultado: <input type="text" id="resultado" value="0" /> </p>
+    </form>
+</body>
+</html>

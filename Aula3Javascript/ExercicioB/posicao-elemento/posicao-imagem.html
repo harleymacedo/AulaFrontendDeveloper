@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição da imagem</title>
+
+    <script>
+        var posicaoAtual = 1;
+    
+        function percorrer() {            
+            var divPersonagem = document.querySelector('#divPersonagem1');
+            var div1 = document.querySelector('#div1');
+            var div2 = document.querySelector('#div2');
+            var div3 = document.querySelector('#div3');
+            if (posicaoAtual == 1) {
+                divPersonagem.style.left = div2.style.left;
+                divPersonagem.style.top = div2.style.top;
+                posicaoAtual = 2;
+            } else if (posicaoAtual == 2) {
+                divPersonagem.style.left = div3.style.left;
+                divPersonagem.style.top = div3.style.top;
+                posicaoAtual = 3;
+            } else {
+                divPersonagem.style.left = div1.style.left;
+                divPersonagem.style.top = div1.style.top;
+                posicaoAtual = 1;
+            }            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="percorrer()">Percorrer</button>
+    </div>
+    <div id="div1" style="position: absolute; left:30px; top: 40px">
+        <img src="https://img.icons8.com/color/96/000000/city.png" id="imgCidade1" alt="cidade1" />
+    </div>
+    <div id="div2" style="position: absolute; left: 500px; top: 200px">
+        <img src="https://img.icons8.com/color/96/000000/city-square.png" id="imgCidade2" alt="cidade2" />
+    </div>
+    <div id="div3" style="position: absolute; left: 300px; top: 450px">
+        <img src="https://img.icons8.com/color/96/000000/city-bench.png" id="imgCidade3" alt="cidade3" />
+    </div>
+    <div id="divPersonagem1" style="position: absolute; left:400px; top: 20px">
+        <img src="https://img.icons8.com/color/48/000000/passenger-with-baggage.png" id="imgPersonagem1" alt="personagem1" />
+    </div>
+</body>
+</html>

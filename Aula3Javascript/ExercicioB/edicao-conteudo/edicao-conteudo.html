@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function modificarConteudos ()
+        {
+            document.getElementById('p1').innerHTML = 'Conteúdo 2'
+        }
+        
+        function adicionarOption ()
+        {
+            document.getElementById('select1').innerHTML = '<option>Novo valor</option>'
+        }
+    </script>
+</head>
+<body>
+    <button onClick='modificarConteudos()'>Modificar</button>
+    <button onClick='adicionarOption()'>Add</button>
+    <p id='p1'>Conteúdo 1 do parágrafo</p>
+    <select id='select1'>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</body>
+</html>

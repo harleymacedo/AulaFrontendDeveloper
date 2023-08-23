@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescimento exponencial</title>
+    <script>
+        function calcular() {
+
+            var nInicial = parseInt(document.getElementById("nInicial").value) 
+            var tempo = parseInt(document.getElementById("tempo").value) 
+            var qtdFinal = nInicial * Math.pow(2, tempo)
+            document.getElementById("resultado").innerHTML = qtdFinal
+
+            if (qtdFinal < 9999999) {
+                var divAmostra = document.getElementById("amostra")
+                for (i = 0; i <= qtdFinal; i++) {
+                    divAmostra.innerHTML = divAmostra.innerHTML + "."
+                    if ((i % 50) === 0) {
+                        divAmostra.innerHTML = divAmostra.innerHTML + "<br>"
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Reprodução exponencial</h3>
+    <p>Número inicial: <input type="text" id="nInicial" /></p>
+    <p>Tempo (hs): <input type="text" id="tempo" /> </p>
+    <button onclick="calcular()">Calcular</button>
+    <p>Resultado:</p>
+    <p id="resultado"></p>
+    <div id="amostra" style="width: 200px;">
+
+    </div>
+</body>
+</html>

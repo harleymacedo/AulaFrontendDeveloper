@@ -1,0 +1,27 @@
+<!-- Assunto: Javascript -->
+<!-- Author: Harley Macedo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function modificarAtributos () 
+        {
+            document.getElementById('text1').placeholder = 'Nome completo'
+            document.getElementById('password1').type = 'text'
+            document.getElementById('submit1').value = 'Enviar dados'
+        } 
+    </script>
+</head>
+<body>
+    <button onClick='modificarAtributos()'>Modificar</button> 
+    <form> 
+        <input type='text' placeholder='Nome' id='text1' />
+        <input type='password' placeholder='Senha' id='password1' />
+        <input type='submit' id='submit1' value='Enviar' />
+    </form>
+</body>
+</html>

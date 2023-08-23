@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="divForm">
+        <input type="text" id="valorCEP" placeholder="Digite o CEP, sem espaços ou traços" />
+        <input type="button" value="Buscar" onClick="buscarDados()" />
+    </div>
+
+    <div id="divInfo">
+
+    </div>
+
+    <script>
+        function buscarDados() {
+            let valor = document.getElementById("valorCEP").value
+            let urlAPI = "https://cep.awesomeapi.com.br/json/" + valor
+            console.log(urlAPI)
+            fetch(urlAPI)
+            .then( (result) => {
+                return result.json()
+            })
+            .then( (dados) => {
+                console.log(dados)
+                document.getElementById("divInfo").innerHTML = dados.address
+            })
+        }
+    </script>
+</body>
+</html>

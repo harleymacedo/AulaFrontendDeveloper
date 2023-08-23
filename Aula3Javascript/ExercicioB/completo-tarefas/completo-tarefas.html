@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo completo</title>
+    <style>
+        #div1 {
+            background-color:darkkhaki;
+            height: 200px;
+            width: 38%;
+            top: 200px;
+            position: absolute;
+        }
+        #div2 {
+            background-color: darkkhaki;
+            height: 200px;
+            width: 18%;
+            left: 40%;
+            top: 200px;
+            position: absolute;
+        }
+        #div3 {
+            background-color: darkkhaki;
+            height: 200px;
+            width: 38%;
+            left: 60%;
+            top: 200px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        let corAtual = 'white'
+        function alternarCor() {
+            if (corAtual == 'white') {
+                document.body.style.backgroundColor = 'silver'
+                corAtual = 'silver'
+            } else {
+                document.body.style.backgroundColor = 'white'
+                corAtual = 'white'
+            }
+        }
+        function jogarItemParaDireita() {
+            var elemento = document.querySelector('#ul1').firstElementChild
+            document.querySelector('#ul2').appendChild(elemento)
+        }
+        function jogarItemParaEsquerda() {
+            var elemento = document.querySelector('#ul2').firstElementChild
+            document.querySelector('#ul1').appendChild(elemento)
+        }
+    </script>
+</head>
+<body>
+    <h2>Lista de compras</h2>
+    <p><img src="https://img.icons8.com/ios/50/000000/brightness-settings.png" onclick="alternarCor()" /></p>
+    <div id="div1">
+        <ul id="ul1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+    <div id="div2">
+        <p><img src="https://img.icons8.com/fluent/48/000000/long-arrow-right.png" onclick="jogarItemParaDireita()" /></p>
+        <p><img src="https://img.icons8.com/fluent/48/000000/long-arrow-left.png" onclick="jogarItemParaEsquerda()" /></p>
+    </div>
+    <div id="div3">
+        <ul id="ul2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+</body>
+</html>

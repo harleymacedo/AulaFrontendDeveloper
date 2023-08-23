@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children element</title>
+    <script>
+        function obterIrmao() {
+            document.getElementById('p1').nextElementSibling.style.color = 'blue'
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>Listar filhos</p>
+        <p id="p1">P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <p>P4</p>
+        <button onclick="obterIrmao()">Listar</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event onChange</title>
+    <script>
+        function verificaTamanho() {
+            var entrada = document.querySelector('#entrada1')
+            var texto = entrada.value
+            var qtdCaracteres = texto.length
+            var span = document.querySelector('#span1')
+            if (qtdCaracteres >= 6) {
+                span.innerHTML = '<img src="https://img.icons8.com/office/30/000000/ok.png"/>'
+            } else {
+                span.innerHTML = ' Necessário ao menos 6 caracteres'
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <label>Nome:<input type="text" id="entrada1" onkeyUp="verificaTamanho()" value="" />
+                <span id="span1" ></span></label>
+        </form>
+    </div>
+</body>
+</html>

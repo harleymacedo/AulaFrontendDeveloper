@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parent element</title>
+    <script>
+        function obterPai() {
+          document.getElementById("li1").parentElement.type = 'circle'
+        }
+    </script>
+</head>
+<body>
+<p>Lista não ordenada</p>
+<ul>
+  <li id="li1">Café</li>
+  <li>Chá</li>
+</ul>
+<button onclick="obterPai()">Obter</button>
+</body>
+</html>

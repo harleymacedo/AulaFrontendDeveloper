@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="divForm">
+        <input type="text" id="valorDolar" placeholder="Valor em Dólar" />
+        <input type="button" value="Converter" onClick="buscarDados()" />
+    </div>
+
+    <div id="divInfo">
+
+    </div>
+
+    <script>
+        function buscarDados() {
+            let valor = parseFloat(document.getElementById("valorDolar").value) 
+            let urlAPI = "https://economia.awesomeapi.com.br/all/USD-BRL"
+            fetch(urlAPI)
+            .then( (result) => {
+                return result.json()
+            })
+            .then( (dados) => {
+                document.getElementById("divInfo").innerHTML = (dados.USD.bid * valor)
+            })
+        }
+    </script>
+</body>
+</html>

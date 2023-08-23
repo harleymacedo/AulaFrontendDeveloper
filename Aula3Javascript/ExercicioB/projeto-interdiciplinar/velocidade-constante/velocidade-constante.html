@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade-constante</title>
+    <style>
+        .div1 {
+            position: absolute;
+            left: 0px;
+        }
+        .div2 {
+            position: absolute;
+            left: 750px;
+        }
+    </style>
+    <script>
+        function dispararFlecha() {
+            let leftAtual = 0
+            setInterval(moverFlecha, 1000)
+
+            function moverFlecha() {
+                leftAtual = leftAtual + 50
+                document.getElementById('div1').style.left = leftAtual + 'px'
+            }
+        } 
+    </script>
+</head>
+<body>
+    <button onClick="dispararFlecha()" >Atirar</button>
+    <div class="div1" id="div1">
+        <img src="img-arrow.png" />
+    </div>
+    <div class="div2" id="div2">
+        <img src="img-apple.png" /> 750 m
+    </div>
+</body>
+</html>

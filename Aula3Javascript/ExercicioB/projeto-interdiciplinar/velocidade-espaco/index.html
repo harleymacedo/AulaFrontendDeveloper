@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade e espaço</title>
+    <script>
+        function calcularEspaco() {
+            console.log("chamou funcao")
+            var v = document.querySelector("#v").value;
+            var t = document.querySelector("#t").value;
+            console.log(v)
+            var resultado = v * t;
+            document.querySelector("#resultado").value = resultado;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>Velocidade constante(km/h): <input type="text" id="v" /> </p>
+        <p>Tempo total(h): <input type="text" id="t" /> </p>
+        <p><input type="button" onclick="calcularEspaco();" value="Calcular"></p>
+        <p>Resultado: <input type="text" value="0" id="resultado" /></p>
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo dos quadrantes</title>
+    <style>
+        table {
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        function calcularQuadrante() {
+            let x = document.querySelector('#text-x').value 
+            let y = document.querySelector('#text-y').value 
+            limpar()
+            if (x > 0 && y > 0) {
+                document.querySelector('#cel1').style.backgroundColor = 'yellow'
+            } else if (x < 0 && y < 0) {
+                document.querySelector('#cel3').style.backgroundColor = 'yellow'
+            } else if (x < 0 && y > 0) {
+                document.querySelector('#cel4').style.backgroundColor = 'yellow'
+            } else if (x > 0 && y < 0) {
+                document.querySelector('#cel2').style.backgroundColor = 'yellow'
+            } else {
+                alert('Valor desconhecido')
+            }
+        }
+        function limpar() {
+            document.querySelector('#cel1').style.backgroundColor = 'white'
+            document.querySelector('#cel2').style.backgroundColor = 'white'
+            document.querySelector('#cel3').style.backgroundColor = 'white'
+            document.querySelector('#cel4').style.backgroundColor = 'white'
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>X: <input type="text" id="text-x" /></p>
+        <p>Y: <input type="text" id="text-y" /></p>
+        <p><input type="button" value="Calcular" onclick="calcularQuadrante()" /></p>
+    </form>
+    <table>
+        <tr>
+            <td id="cel2">Q2</td><td id="cel1">Q1</td>
+        </tr>
+        <tr>
+            <td id="cel3">Q3</td><td id="cel4">Q4</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistura soluções</title>
+</head>
+
+<script>
+    let posicao = 1
+    let a, b, c = "" 
+
+    function adicionar(event) {
+        if (posicao === 1) {
+            document.getElementById("elemento1").src = event.target.src 
+            a = event.target.id
+            posicao = 2
+        } else  {
+            document.getElementById("elemento2").src = event.target.src 
+            posicao = 1
+            b = event.target.id
+            if (a === "vento" & b === "terra") {
+                document.getElementById("elemento3").src = "https://img.icons8.com/officel/80/000000/dust.png"
+            } else if (a === "vento" & b === "fogo") {
+                document.getElementById("elemento3").src = "https://img.icons8.com/cotton/64/000000/energy-care-1--v2.png"
+            } else if (a === "vento" & b === "agua") {
+                document.getElementById("elemento3").src = "https://img.icons8.com/plasticine/100/000000/rain.png"
+            }
+        }
+    }
+</script>
+<body>
+    <table>
+        <tr>
+            <td><img src="https://img.icons8.com/officel/80/000000/wind.png" onclick="adicionar(event)" id="vento" /></td>
+            <td><img src="https://img.icons8.com/officel/80/000000/fire-element.png" onclick="adicionar(event)" id="fogo" /></td> 
+            <td><img src="https://img.icons8.com/officel/80/000000/water.png" onclick="adicionar(event)" id="agua" /></td>
+            <td><img src="https://img.icons8.com/officel/80/000000/soil.png" onclick="adicionar(event)" id="terra" /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><img src="https://img.icons8.com/windows/64/000000/question-mark.png" id="elemento1"/></td> 
+            <td><img src="https://img.icons8.com/windows/64/000000/question-mark.png" id="elemento2"/></td> 
+            <td>=</td> 
+            <td><img src="https://img.icons8.com/windows/64/000000/question-mark.png" id="elemento3"/></td>
+        </tr>
+    </table>
+</body>
+</html>

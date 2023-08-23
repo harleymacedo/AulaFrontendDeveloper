@@ -1,0 +1,26 @@
+<!-- Assunto: Javascript -->
+<!-- Author: Harley Macedo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atributo de estilo</title>
+    <script>
+        function modificarCores () {
+            document.querySelector('#text1').style.backgroundColor = '#4422ff'
+            document.querySelector('#text1').style.color = '#ffffff'
+            document.querySelector('#text1').style.height = '30px'
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="divPrincipal">
+        <button id="botao1" onClick='modificarCores()'>Mofificar</button>
+        <input type='text' id='text1' value='Curso de Javascript' />
+    </div>
+</body>
+</html>
+

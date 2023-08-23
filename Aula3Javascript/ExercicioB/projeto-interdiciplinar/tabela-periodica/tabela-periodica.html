@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica</title>
+
+    <style>
+        table {
+            border: 1px solid green;
+        }
+    </style>
+
+    <script> 
+        function exibirInfo(event) {
+            let valor = event.target.innerHTML
+            let divInfo = document.getElementById("info")
+            console.log(valor)
+            switch (valor){
+                case "H": 
+                    divInfo.innerHTML = "<h3>Hidrogênio</h3> <p>1,008</p> <img src='https://img.icons8.com/emoji/96/000000/rocket-emji.png'/> "
+                    break
+                case "O":
+                    divInfo.innerHTML = "<h3>Oxigênio </h3> <p>15,999</p> <img src='https://img.icons8.com/cotton/64/000000/scuba-tank.png'/>"
+                    break
+                case "Al":
+                    divInfo.innerHTML = "<h3>Aluminio </h3> <p>26,982</p> <img src='https://img.icons8.com/emoji/96/000000/airplane-emoji.png'/>"
+                    break
+                default:
+                    divInfo.innerHTML = "<h3>Elemento não encontrado</h3>"
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td><button onclick="exibirInfo(event)">H</button></td> 
+            <td><button onclick="exibirInfo(event)">O</button></td> 
+            <td ><button onclick="exibirInfo(event)">Al</button></td>
+        </tr>
+        <tr>
+            <td ><button onclick="exibirInfo(event)">C</button></td> 
+            <td><button onclick="exibirInfo(event)">F</button></td> 
+            <td><button onclick="exibirInfo(event)">Cl</button></td>
+        </tr>    
+    </table>
+    <div id="info">  </div>
+</body>
+</html>
