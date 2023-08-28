@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var e escopo de função
+        {
+            var x = 2
+        }
+        console.log(x)
+
+        //let e escopo de bloco
+        {
+            let y = 2
+        }
+        console.log(y)
+
+        //const e escopo de bloco
+        {
+            const z = 5
+        }
+        console.log(z)
+
+        //const com mudança de valores do objeto
+        const notebook = { marca: 'Apple', modelo: 'Macbook Air' }
+        notebook.modelo = 'Macbook Air M1'
+    </script>
+</body>
+
+</html>
