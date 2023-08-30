@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divConteudo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadros" class="divConteudo">
+        <input type="button" value="Adicionar" onclick="adicionar()" />
+    </div>
+    <script>
+        function adicionar() {
+            let novoDate = document.createElement('input')
+            novoDate.type = 'date'
+            document.getElementById('quadros').append(novoDate)
+        }
+    </script>
+</body>
+</html>
