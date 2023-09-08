@@ -31,7 +31,7 @@
         <li>Estrutura de script</li>
         <li>Variáveis</li>
         <li>Estrutura DOM</li>
-        <li>Coamando Fetch</li>
+        <li>Comando Fetch</li>
     </ol>
     <li>Aula 4: Prototipagem</li>
     <ol>
@@ -46,9 +46,10 @@
     </ol>
     <li>Aula 6: Deploy e versionamento</li>
     <ol>
-        <li>Conceitos</li>
-        <li>Servidor HTTP</li>
-        <li>Interpretador Javascript</li>          
+        <li>Git e Github</li>
+        <li>Serviços de nuvem com Heroku</li>
+        <li>Serviços de nuvem com Vercel</li>
+        <li>Monitoramento de sistemas</li>          
     </ol>
     <li>Aula 7: React Native</li>
     <ol>
