@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import CardProfessor from './CardProfessor'
+import { useState } from 'react'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [professores, setProfessores] = useState([
+        {"nome": "Joana", "area": "Banco de dados"},
+        {"nome": "Yago", "area": "Estrutura de dados"},
+        {"nome": "Teresa", "area": "Engenharia de software"}
+    ])
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                {professores.map( function (professorAtual) {
+                    return (
+                        <CardProfessor professor={professorAtual} />
+                    )
+                })
+                }   
+            </header>
+        </div>
+    )
 }
 
-export default App;
+export default App
