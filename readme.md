@@ -33,16 +33,21 @@
         <li>Estrutura DOM</li>
         <li>Comando Fetch</li>
     </ol>
-    <li>Aula 4: Prototipagem</li>
-    <ol>
-        <li>Usabilidade</li>
-        <li>Figma</li>
-    </ol>
-    <li>Aula 5: Reactjs</li>
+    <li>Aula 4: Reactjs</li>
     <ol>
         <li>Conceitos</li> 
         <li>JSX</li>
-        <li>Componente</li>
+        <li>Componentes</li>
+        <li>Propriedades</li>
+        <li>Estado</li>
+        <li>Renderização repetitiva</li>
+        <li>Renderização condicional</li>
+        <li>Estilo com React Bootstrap</li>
+    </ol>
+    <li>Aula 5: Prototipagem</li>
+    <ol>
+        <li>Usabilidade</li>
+        <li>Figma</li>
     </ol>
     <li>Aula 6: Deploy e versionamento</li>
     <ol>
