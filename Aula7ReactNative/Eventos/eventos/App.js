@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, SafeAreaView } from 'react-native'
 import BuscaFrete from './components/BuscaFrete'
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <BuscaFrete />
+        <SafeAreaView>
+            <BuscaFrete cor='green' tipo="detalhado" />
             <StatusBar style="auto" />
-        </View>
+        </SafeAreaView>
     )
 }
 
