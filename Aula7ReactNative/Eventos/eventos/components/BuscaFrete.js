@@ -19,7 +19,7 @@ const BuscaFrete = (props) => {
     }
 
     const exibirMensagem = () => {
-        Alert.alert('Até agora temos o frete:' + cep)
+        Alert.alert('Até agora temos o cep:' + cep)
     }
 
     return (
