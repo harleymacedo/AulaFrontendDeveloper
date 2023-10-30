@@ -40,46 +40,40 @@
         <li>Componentes</li>
         <li>Propriedades</li>
         <li>Estado</li>
+        <li>React Hooks</li>
         <li>Renderização repetitiva</li>
         <li>Renderização condicional</li>
         <li>Estilo com React Bootstrap</li>
+        <li>Socket e Stream</li>
     </ol>
-    <li>Aula 5: Prototipagem</li>
-    <ol>
-        <li>Usabilidade</li>
-        <li>Figma</li>
-    </ol>
-    <li>Aula 6: Deploy e versionamento</li>
+    <li>Aula 5: Deploy e versionamento</li>
     <ol>
         <li>Git e Github</li>
         <li>Serviços de nuvem com Heroku</li>
         <li>Serviços de nuvem com Vercel</li>
         <li>Monitoramento de sistemas</li>          
     </ol>
-    <li>Aula 7: React Native</li>
+    <li>Aula 6: React Native</li>
     <ol>
         <li>Conceitos</li>
-        <li>Componentes nativos</li>
+        <li>Componentes</li>
+        <li>React Hooks</li>
         <li>Eventos</li>
-    </ol>
-    <li>Aula 8: Socket e Stream</li>
-    <ol>
-        <li>Conceitos</li>
-        <li>Chunk</li>
-    </ol>
-    <li>Aula 9: Recursos diversos</li>
-    <ol>
-        <li>Mapas</li>
         <li>Câmera</li>
-        <li>Login social</li>
-        <li>Envio de email</li>
+        <li>Localização</li>
     </ol>
-    <li>Aula 10: Projeto gerenciado</li>
+    <li>Aula 7: Prototipagem</li>
     <ol>
+        <li>Usabilidade</li>
+        <li>Figma</li>
+    </ol>
+    <li>Aula 8: Projeto gerenciado</li>
+    <ol>
+        <li>Scrum</li>
         <li>Jira</li>
         <li>Projeto</li>
         <li>Equipe</li>
-        <li>Kanban</li>
         <li>Tarefas</li>
+        <li>Sprints</li>
     </ol>
 </ul>
