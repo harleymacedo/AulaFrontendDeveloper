@@ -67,13 +67,4 @@
         <li>Usabilidade</li>
         <li>Figma</li>
     </ol>
-    <li>Aula 8: Projeto gerenciado</li>
-    <ol>
-        <li>Scrum</li>
-        <li>Jira</li>
-        <li>Projeto</li>
-        <li>Equipe</li>
-        <li>Tarefas</li>
-        <li>Sprints</li>
-    </ol>
 </ul>
