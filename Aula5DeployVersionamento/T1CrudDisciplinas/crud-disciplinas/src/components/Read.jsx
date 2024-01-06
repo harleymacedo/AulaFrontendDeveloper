@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './Read.css'
 
 const Read = () => {
 
@@ -8,8 +9,26 @@ const Read = () => {
         setDisciplinas([])
     }, [] )
 
+    const pesquisar = () => {
+        try {
+            const url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
+            const dados = fetch(url, {method: 'GET'})
+            console.log(dados)
+            const dadosJson = dados.json()
+            setDisciplinas(dadosJson)  
+        } catch (error) {
+            console.log('Erro detectado')
+        }
+        
+    }
+
     return (
-        <div>
+        <div className='form1'>
+            <h2>Formulário de consulta de disciplinas</h2>
+            <form>
+                <input type='search' name='busca1' id='busca1' />
+                <input type='button' value='Buscar' id='btnBusca1' onClick={pesquisar} />
+            </form>
             {disciplinas.map( 
                 (elemento) => {
                     return(
