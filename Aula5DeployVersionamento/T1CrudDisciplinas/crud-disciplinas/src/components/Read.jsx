@@ -9,12 +9,12 @@ const Read = () => {
         setDisciplinas([])
     }, [] )
 
-    const pesquisar = () => {
+    const pesquisar = async () => {
         try {
             const url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
-            const dados = fetch(url, {method: 'GET'})
+            const dados = await fetch(url, {method: 'GET'})
             console.log(dados)
-            const dadosJson = dados.json()
+            const dadosJson = await dados.json()
             setDisciplinas(dadosJson)  
         } catch (error) {
             console.log('Erro detectado')
