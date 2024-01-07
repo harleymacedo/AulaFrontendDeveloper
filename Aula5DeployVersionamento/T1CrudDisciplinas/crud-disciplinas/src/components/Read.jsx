@@ -13,7 +13,6 @@ const Read = () => {
         try {
             const url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
             const dados = await fetch(url, {method: 'GET'})
-            console.log(dados)
             const dadosJson = await dados.json()
             setDisciplinas(dadosJson)  
         } catch (error) {
