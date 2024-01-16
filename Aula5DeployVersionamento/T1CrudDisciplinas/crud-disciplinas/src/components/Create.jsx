@@ -1,4 +1,6 @@
 
+import './Create.css'
+
 const Create = () => {
 
     const inserir = () => {
