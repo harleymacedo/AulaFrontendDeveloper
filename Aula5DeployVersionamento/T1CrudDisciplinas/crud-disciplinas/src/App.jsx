@@ -1,11 +1,11 @@
 import './App.css'
-import Read from './components/Read'
+import Login from './components/Login'
 
 const App = () => {
     return (
         <div>
             <h1>Sistema de Disciplinas</h1>
-            <Read />
+            <Login />
             <p>Desenvolvido para as aulas de PSW1 e PSW2 do IFCE Campus Crato</p>
         </div>
     )
