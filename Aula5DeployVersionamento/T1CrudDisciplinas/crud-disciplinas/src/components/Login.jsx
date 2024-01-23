@@ -1,10 +1,16 @@
 
+import { useState } from 'react'
 import './Login.css'
 
 const Login = () => {
 
-    const logar = () => {
+    const [usuario, setUsuario] = useState('') 
+    const [senha, setSenha] = useState('')
 
+    const logar = () => {
+        console.log(usuario, senha)
+        setUsuario('')
+        setSenha('')
     }
 
     return (
