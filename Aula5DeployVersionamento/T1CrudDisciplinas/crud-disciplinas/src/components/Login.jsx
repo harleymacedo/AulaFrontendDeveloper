@@ -1,4 +1,4 @@
-
+//Imports gerais
 import { useState } from 'react'
 import './Login.css'
 
@@ -8,17 +8,25 @@ const Login = () => {
     const [senha, setSenha] = useState('')
 
     const logar = () => {
-        console.log(usuario, senha)
-        setUsuario('')
-        setSenha('')
+        const url = 'https://aula-backend-developer-fc7o.vercel.app/usuario/valida'
+        const dados = fetch({'usuario': usuario, 'senha': senha}, url, {method: 'GET'})
+        console.log(dados)
+    }
+
+    const atualizaUsuario = (event) => {
+        setUsuario(event.target.value)
+    }
+
+    const atualizaSenha = (event) => {
+        setSenha(event.target.value)
     }
 
     return (
         <div className="form1">
             <h2>Login no sistema</h2>
             <form>
-                <input type='text' name='usuario' id='usuario' />
-                <input type='password' name='senha' id='senha' />
+                <input type='text' name='usuario' id='usuario' onChange={atualizaUsuario} />
+                <input type='password' name='senha' id='senha' onChange={atualizaSenha} />
                 <input type='button' value='Entrar' id='btnLogar' onClick={logar} />
             </form>
         </div>
