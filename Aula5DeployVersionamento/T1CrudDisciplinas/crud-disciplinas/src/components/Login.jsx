@@ -7,14 +7,19 @@ const Login = () => {
     const [usuario, setUsuario] = useState('') 
     const [senha, setSenha] = useState('')
 
-    const logar = () => {
+    const logar = async () => {
         const url = 'https://aula-backend-developer-fc7o.vercel.app/usuario/valida'
-        const dados = fetch({'usuario': usuario, 'senha': senha}, url, {method: 'GET'})
+        const dados = await fetch(url, requestOptions: {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: {'usuario': usuario, 'senha': senha}, 
+        })
         console.log(dados)
     }
 
     const atualizaUsuario = (event) => {
         setUsuario(event.target.value)
+        console.log(usuario)
     }
 
     const atualizaSenha = (event) => {
