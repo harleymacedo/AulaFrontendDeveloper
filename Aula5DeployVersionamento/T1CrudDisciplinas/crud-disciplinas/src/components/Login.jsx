@@ -8,11 +8,11 @@ const Login = () => {
     const [senha, setSenha] = useState('')
 
     const logar = async () => {
-        const url = 'https://aula-backend-developer-fc7o.vercel.app/usuario/valida'
-        const dados = await fetch(url, requestOptions: {
+        const url = 'https://aula-backend-developer-fc7o.vercel.app/verificarLogin'
+        const dados = await fetch(url, {
             method: 'POST',
+            body: JSON.stringify({'usuario': usuario, 'senha': senha}), 
             headers: { 'Content-Type': 'application/json' },
-            body: {'usuario': usuario, 'senha': senha}, 
         })
         console.log(dados)
     }
