@@ -14,7 +14,8 @@ const Login = () => {
             body: JSON.stringify({'usuario': usuario, 'senha': senha}), 
             headers: { 'Content-Type': 'application/json' },
         })
-        console.log(dados)
+        const dadosParseados = await dados.json()
+        console.log(dadosParseados)
     }
 
     const atualizaUsuario = (event) => {
