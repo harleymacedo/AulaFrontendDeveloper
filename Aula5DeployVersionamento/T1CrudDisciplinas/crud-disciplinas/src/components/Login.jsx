@@ -11,8 +11,8 @@ const Login = () => {
         const url = 'https://aula-backend-developer-fc7o.vercel.app/verificarLogin'
         const dados = await fetch(url, {
             method: 'POST',
-            body: JSON.stringify({'usuario': usuario, 'senha': senha}), 
             headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({'nome': usuario, 'senha': senha}), 
         })
         const dadosParseados = await dados.json()
         console.log(dadosParseados)
