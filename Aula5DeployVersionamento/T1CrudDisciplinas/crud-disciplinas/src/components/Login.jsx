@@ -15,6 +15,9 @@ const Login = () => {
             body: JSON.stringify({'nome': usuario, 'senha': senha}), 
         })
         const dadosParseados = await dados.json()
+        if (dadosParseados.logado === true) {
+            
+        }
         console.log(dadosParseados)
     }
 
