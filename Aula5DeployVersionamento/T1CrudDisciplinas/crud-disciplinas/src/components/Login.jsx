@@ -1,6 +1,8 @@
 //Imports gerais
 import { useState } from 'react'
 import './Login.css'
+import { redirect } from 'react-router-dom';
+
 
 const Login = () => {
 
@@ -16,9 +18,8 @@ const Login = () => {
         })
         const dadosParseados = await dados.json()
         if (dadosParseados.logado === true) {
-            
+            redirect('/create')
         }
-        console.log(dadosParseados)
     }
 
     const atualizaUsuario = (event) => {
