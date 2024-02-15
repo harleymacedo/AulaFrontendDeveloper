@@ -4,12 +4,12 @@ import Create from './components/Create'
 import Read from './components/Read'
 import Update from './components/Update'
 import Delete from './components/Delete'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 
 const App = () => {
     return (
         <div>
-            <Router>
+            {/* <Router>
                 <div>
                     <ul>
                         <li>
@@ -49,8 +49,9 @@ const App = () => {
                         </Route>
                     </Switch>
                 </div>
-            </Router>
+            </Router> */}
             <h1>Sistema de Disciplinas</h1>
+            <Outlet />
             <p>Desenvolvido para as aulas de PSW1 e PSW2 do IFCE Campus Crato</p>
         </div>
     )
