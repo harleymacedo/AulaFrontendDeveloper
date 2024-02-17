@@ -7,6 +7,7 @@ import Create from './components/Create'
 import Read from './components/Read'
 import Update from './components/Update'
 import Delete from './components/Delete'
+import ErrorPage from './components/ErrorPage'
 
 import {
     createBrowserRouter,
@@ -17,9 +18,10 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
-                path: '/login',
+                path: '/',
                 element: <Login />,
             },
             {
