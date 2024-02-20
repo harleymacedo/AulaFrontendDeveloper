@@ -41,7 +41,7 @@ const Read = () => {
         <div className='form1'>
             <h2>Formulário de consulta de disciplinas</h2>
             <form>
-                <input type='search' name='busca1' id='busca1' onChange={atualizarTermoPesquisa} />
+                <input type='text' name='busca1' id='busca1' onChange={atualizarTermoPesquisa} />
                 <input type='button' value='Buscar' id='btnBusca1' onClick={pesquisar} />
             </form>
             {disciplinas.map( 
