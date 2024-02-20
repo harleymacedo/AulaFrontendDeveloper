@@ -4,17 +4,33 @@ import './Read.css'
 const Read = () => {
 
     const [disciplinas, setDisciplinas] = useState([])
+    const [termoPesquisa, setTermoPesquisa] = useState('')
 
     useEffect( () => {
         setDisciplinas([])
     }, [] )
 
+    const atualizarTermoPesquisa = (event) => {
+        console.log(event.target.value)
+        setTermoPesquisa(event.target.value)
+    }
+
     const pesquisar = async () => {
         try {
-            const url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
+            let url = `https://aula-backend-developer-fc7o.vercel.app/disciplina/codigo/${termoPesquisa}`
+            if (termoPesquisa === '') {
+                url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
+            }
+            console.log(url)
             const dados = await fetch(url, {method: 'GET'})
             const dadosJson = await dados.json()
-            setDisciplinas(dadosJson)  
+            const arrayTemp = []
+            arrayTemp.push(dadosJson)
+            if (termoPesquisa === '') {
+                setDisciplinas(dadosJson)                
+            } else {
+                setDisciplinas(arrayTemp)  
+            }
         } catch (error) {
             console.log('Erro detectado')
         }
@@ -25,7 +41,7 @@ const Read = () => {
         <div className='form1'>
             <h2>Formulário de consulta de disciplinas</h2>
             <form>
-                <input type='search' name='busca1' id='busca1' />
+                <input type='search' name='busca1' id='busca1' onChange={atualizarTermoPesquisa} />
                 <input type='button' value='Buscar' id='btnBusca1' onClick={pesquisar} />
             </form>
             {disciplinas.map( 
