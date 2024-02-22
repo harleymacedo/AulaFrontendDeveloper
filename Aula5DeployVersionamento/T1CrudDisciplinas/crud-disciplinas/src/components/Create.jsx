@@ -30,9 +30,8 @@ const Create = () => {
                 },
                 body: JSON.stringify({nome: nome, codigo: codigo, cargaHoraria: ch})
             })
-            console.log('Usuario inserido')
         } catch (error) {
-            console.log('erro detectado')
+            console.log('Erro detectado')
         }
     }
 
