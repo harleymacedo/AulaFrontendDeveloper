@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import './Create.css'
-import { Button } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
 const Create = () => {
 
@@ -25,11 +25,11 @@ const Create = () => {
         try {
             const url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina'
             await fetch(url, {
-                method: 'POST', 
+                method: 'POST',
                 headers: {
                     "Content-Type": 'application/json',
                 },
-                body: JSON.stringify({nome: nome, codigo: codigo, cargaHoraria: ch})
+                body: JSON.stringify({ nome: nome, codigo: codigo, cargaHoraria: ch })
             })
         } catch (error) {
             console.log('Erro detectado')
@@ -37,15 +37,14 @@ const Create = () => {
     }
 
     return (
-        <div className='form1'>
+        <div className='div1'>
             <h2>Formulário de criação de disciplinas</h2>
-            <form>
-                <input type='text' name='Nome' id='nome' onChange={atualizarNome} />
-                <input type='text' name='Codigo' id='codigo' onChange={atualizarCodigo} />
-                <input type='text' name='CH' id='ch' onChange={atualizarCh} />
-                <input type='button' value='Criar' id='btnBusca1' onClick={inserir} />
-                <Button variant='primary' onClick={inserir}>Criar</Button>
-            </form>
+            <Form className='form1'>
+                <Form.Control type='text' placeholder='Nome' onChange={atualizarNome} />
+                <Form.Control type='text' placeholder='Código' onChange={atualizarCodigo} />
+                <Form.Control type='text' placeholder='Carga Horária' onChange={atualizarCh} />                
+                <Button variant='outline-success' onClick={inserir}>Criar</Button>
+            </Form>
         </div>
     )
 }
