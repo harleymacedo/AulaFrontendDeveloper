@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './Create.css'
+import { Button } from 'react-bootstrap'
 
 const Create = () => {
 
@@ -43,6 +44,7 @@ const Create = () => {
                 <input type='text' name='Codigo' id='codigo' onChange={atualizarCodigo} />
                 <input type='text' name='CH' id='ch' onChange={atualizarCh} />
                 <input type='button' value='Criar' id='btnBusca1' onClick={inserir} />
+                <Button variant='primary' onClick={inserir}>Criar</Button>
             </form>
         </div>
     )
