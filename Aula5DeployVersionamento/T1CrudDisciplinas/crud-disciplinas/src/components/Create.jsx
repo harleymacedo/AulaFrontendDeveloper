@@ -43,7 +43,7 @@ const Create = () => {
                 <Form.Control type='text' placeholder='Nome' onChange={atualizarNome} />
                 <Form.Control type='text' placeholder='Código' onChange={atualizarCodigo} />
                 <Form.Control type='text' placeholder='Carga Horária' onChange={atualizarCh} />                
-                <Button variant='outline-success' onClick={inserir}>Criar</Button>
+                <Button variant='success' onClick={inserir}>Criar</Button>
             </Form>
         </div>
     )
