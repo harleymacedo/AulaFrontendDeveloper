@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscolhaAcai</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: blueviolet;
+            color: white;
+            height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .div2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="div1">
+        <h1>Acaí da Esquina</h1>
+        <h3>Todo mundo gosta!</h3>
+    </div>
+    <div id="div2" class="div2">   
+        <div id="divTipo">
+            <input type="radio" name="tipo" value="Puro" checked /><label>Puro</label>
+            <input type="radio" name="tipo" value="Doce" /><label>Doce</label>
+            <input type="radio" name="tipo" value="Refinado" /><label>Refinado</label>
+        </div>     
+        <div id="divMisturas">
+            <input type="checkbox" name="misturas" value="Uva" checked /> <label>Uva</label>
+            <input type="checkbox" name="misturas" value="Morango" /> <label>Morango</label>
+            <input type="checkbox" name="misturas" value="Nutela" /> <label>Nutela</label>
+            <input type="checkbox" name="misturas" value="Kiwi" /> <label>Kiwi</label>
+        </div>
+        <button onclick="proximo()">Próximo</button>        
+    </div>
+    <div id="div3">
+
+    </div>
+
+    <script>
+        var tipo = null
+        var misturas = []
+        function proximo() {
+            let radioTipo = document.getElementById('divTipo')
+            for (const child of radioTipo.children) {
+                console.log(child.tagName)
+            }
+            // tagsRadio.forEach( (element) => {
+            //     if (element.selectd === true) {
+            //         tipo = element.value
+            //     }
+            // })
+            //console.log(novoRadioTipo)
+        }
+    </script>
+</body>
+</html>
