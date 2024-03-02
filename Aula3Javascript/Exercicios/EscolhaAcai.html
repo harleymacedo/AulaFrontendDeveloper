@@ -56,16 +56,11 @@
         var tipo = null
         var misturas = []
         function proximo() {
-            let radioTipo = document.getElementById('divTipo')
-            for (const child of radioTipo.children) {
-                console.log(child.tagName)
-            }
-            // tagsRadio.forEach( (element) => {
-            //     if (element.selectd === true) {
-            //         tipo = element.value
-            //     }
-            // })
-            //console.log(novoRadioTipo)
+            let filhosDiv = Array.from(document.getElementById('divTipo').children)          
+            let novosFilhos = filhosDiv.map( (element) => {
+                return (element.select === true)
+            })
+            console.log(filhosDiv[0])
         }
     </script>
 </body>
