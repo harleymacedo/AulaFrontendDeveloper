@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,53 +16,82 @@
             height: 100vh;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
         .div1 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+
         .div2 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+
+        .div3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        }
     </style>
 </head>
+
 <body>
     <div id="div1" class="div1">
         <h1>Acaí da Esquina</h1>
         <h3>Todo mundo gosta!</h3>
     </div>
-    <div id="div2" class="div2">   
+    <div id="div2" class="div2">
         <div id="divTipo">
             <input type="radio" name="tipo" value="Puro" checked /><label>Puro</label>
             <input type="radio" name="tipo" value="Doce" /><label>Doce</label>
             <input type="radio" name="tipo" value="Refinado" /><label>Refinado</label>
-        </div>     
+        </div>
         <div id="divMisturas">
             <input type="checkbox" name="misturas" value="Uva" checked /> <label>Uva</label>
             <input type="checkbox" name="misturas" value="Morango" /> <label>Morango</label>
             <input type="checkbox" name="misturas" value="Nutela" /> <label>Nutela</label>
             <input type="checkbox" name="misturas" value="Kiwi" /> <label>Kiwi</label>
+            <button onclick="proximo()">Próximo</button>
         </div>
-        <button onclick="proximo()">Próximo</button>        
     </div>
-    <div id="div3">
-
+    <div id="div3" class="div3">
+        <p>Resumo:</p>
     </div>
 
     <script>
         var tipo = null
         var misturas = []
         function proximo() {
-            let filhosDiv = Array.from(document.getElementById('divTipo').children)          
-            let novosFilhos = filhosDiv.map( (element) => {
-                return (element.select === true)
+            let filhosDivTipo = Array.from(document.getElementById('divTipo').children)
+            tipoElemento = filhosDivTipo.find((element) => {
+                return (element.checked)
             })
-            console.log(filhosDiv[0])
+            tipo = tipoElemento.value
+            let filhosDivMistura = Array.from(document.getElementById('divMisturas').children)
+            filhosDivMistura.forEach((element) => {
+                if (element.type === 'checkbox' && element.checked === true) {
+                    misturas.push(element.value)
+                }
+            })
+            let div3 = document.getElementById('div3')
+            div3.style.visibility = 'visible'
+            let texto = '<p>Tipo: ' + tipo + '</p>'
+            texto += '<p>Misturas: </p>'
+            misturas.forEach((element) => {
+                texto += `<li> ${element} </li>`
+            })
+            div3.innerHTML = texto
+            document.getElementById('divTipo').remove()
+            document.getElementById('divMisturas').remove()
         }
+
     </script>
 </body>
+
 </html>
