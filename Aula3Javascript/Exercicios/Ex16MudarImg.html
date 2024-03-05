@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex16MudarImg</title>
+    <style>
+        .divPrincipal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+        .imgMiniatura {
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="divPrincipal" id="divPrincipal">
+        <img src="./recursos/img1.jpg" class="imgMiniatura" onclick="aplicarPlanoFundo(event)" />
+        <img src="./recursos/img2.jpg" class="imgMiniatura" onclick="aplicarPlanoFundo(event)" />
+        <img src="./recursos/img3.jpeg" class="imgMiniatura" onclick="aplicarPlanoFundo(event)" />
+    </div>
+
+    <script>
+        function aplicarPlanoFundo(event) {
+            document.getElementById('divPrincipal').style.backgroundImage = "url(" + event.target.src + ")"
+        }
+    </script>
+</body>
+</html>
