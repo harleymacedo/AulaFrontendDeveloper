@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .divImg {
+            height: 100px;
+            width: 100px;
+        }
+        .imagemPequena {
+            height: 50px;
+            width: 50px;
+        }
+        .imagemGrande {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="divContainer">
+            <div class="divImg">
+                <img src="./recursos/android.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+            <div class="divImg">
+                <img src="./recursos/apple.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+            <div class="divImg">
+                <img src="./recursos/arrows-move.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+            <div class="divImg">
+                <img src="./recursos/badge-4k.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+            <div class="divImg">
+                <img src="./recursos/balloon.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+            <div class="divImg">
+                <img src="./recursos/bootstrap.svg" class="imagemPequena" onmouseover="aumentar(event)" onmouseout="diminuir(event)" />
+            </div>
+        </div>
+    
+    <script>
+        function aumentar(event) {
+            event.target.className = 'imagemGrande'
+        }
+
+        function diminuir(event) {
+            event.target.className = 'imagemPequena'
+        }
+    </script>
+</body>
+</html>
