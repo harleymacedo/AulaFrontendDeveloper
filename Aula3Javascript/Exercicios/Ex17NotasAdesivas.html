@@ -14,27 +14,42 @@
             border: 1px solid green;
         }
         .divNotasAdesivas {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             border: 1px solid blue;
         }
         .divNota {
-            height: 160px;
+            height: 200px;
             background-color: azure;
-            width: 80px;
+            width: 160px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div class="divPrincipal">
         <div class="divBarraMenu">
-            <button> + Nova nota adesiva </button>
+            <button onclick="adicionarNota()" > + Nova nota adesiva </button>
         </div>
-        <div class="divNotasAdesivas">
+        <div class="divNotasAdesivas" id="divNotasAdesivas">
             <div class="divNota">
-                <p>Título</p>
-                <p>Descrição</p>
-                <button>Editar</button>
+                <input type="text" />
             </div>
         </div>
     </div>
+
+    <script>
+        function adicionarNota () {
+            let novaNota = document.createElement('div')
+            let novoInput = document.createElement('input')
+            novoInput.type = 'text'
+            novaNota.append(novoInput)
+            document.getElementById('divNotasAdesivas').append(novaNota)
+            novaNota.className = 'divNota'
+        }
+    </script>
 </body>
 </html>
