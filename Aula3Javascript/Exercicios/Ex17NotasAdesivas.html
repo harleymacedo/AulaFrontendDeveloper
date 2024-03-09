@@ -37,6 +37,7 @@
         <div class="divNotasAdesivas" id="divNotasAdesivas">
             <div class="divNota">
                 <input type="text" />
+                <button onclick="excluirNota(event)">Excluir</button>
             </div>
         </div>
     </div>
@@ -45,10 +46,18 @@
         function adicionarNota () {
             let novaNota = document.createElement('div')
             let novoInput = document.createElement('input')
+            let novoButton = document.createElement('button')
             novoInput.type = 'text'
+            novoButton.textContent = 'Excluir'
+            novoButton.addEventListener('click', excluirNota)
             novaNota.append(novoInput)
+            novaNota.append(novoButton)
             document.getElementById('divNotasAdesivas').append(novaNota)
             novaNota.className = 'divNota'
+        }
+
+        function excluirNota (event) {
+            event.target.parentElement.remove()
         }
     </script>
 </body>
