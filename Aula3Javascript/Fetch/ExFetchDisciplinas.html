@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExFetchDisciplinas</title>
+    <style>
+        .divCard {
+            border: 1px solid green;
+            height: 100px;
+            width: 200px;
+            background-color: gold;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Listagem de disciplinas do IFCE</h3>
+    <button onclick="listar()">Listar</button>
+    <div id="divResultado"></div>
+    <script>
+        async function listar () {
+            let url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
+            let resultado = await fetch(url)
+            let resFormatado = await resultado.json()
+            resFormatado.forEach( function (elemento) {
+                let novoDivCard = document.createElement('div')
+                novoDivCard.className = 'divCard'
+                novoDivCard.innerHTML = elemento.nome
+                document.getElementById('divResultado').append(novoDivCard)
+            })
+        }
+    </script>
+</body>
+</html>
