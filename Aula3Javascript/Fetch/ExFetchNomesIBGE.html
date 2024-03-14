@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExFetchNomesIBGE</title>
+</head>
+<body>
+
+    <div id="divCabecalho">
+        <h2>Pesquisa de frequência de nomes no IBGE na década 2010 - 2020</h2>
+        <input type="text" id="textoNome" placeholder="Nome" />
+        <button onclick="pesquisar()" >Pesquisar</button>
+    </div>
+
+    <div id="divResultado">
+        <p>Nomes registrados no Brasil entre 2010 e 2020:</p>
+        <p id="pResultado"></p>
+    </div>
+
+    <script>
+        async function pesquisar () {
+            let texto = document.getElementById('textoNome').value
+            let url = 'https://servicodados.ibge.gov.br/api/v2/censos/nomes/' + texto
+            let resultado = await fetch(url)
+            let resultadoFormatado = await resultado.json()
+            console.log(resultadoFormatado[0].res[7].frequencia)
+            document.getElementById('pResultado').textContent = resultadoFormatado[0].res[7].frequencia
+        }
+    </script>
+</body>
+</html>
