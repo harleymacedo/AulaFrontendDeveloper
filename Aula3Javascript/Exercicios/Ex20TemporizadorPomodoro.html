@@ -9,14 +9,55 @@
 
     <div id="cabecalho">
         <h2>Temporizador Pomodoro</h2>
-        <p>Com a técnica pomodoro, você precisa realizar um trabalho de forma concentrada durante 20 minutos. Depois 
-            descança por 5 minutos e depois volta a fazer outro trabalho de 20 minutos.
+        <p>
+            Com a técnica pomodoro, você precisa realizar um trabalho de forma
+            concentrada durante 20 minutos. Depois descança por 5 minutos e depois
+            volta a fazer outro trabalho de 20 minutos.
         </p>
     </div>
 
-    <div id="principal">
-        <h1 id="relogio" class="relogio"> 10:10:10 </h1>
+    <div id="controles">
+        <button>Iniciar</button>
+        <button>Parar</button>
     </div>
+
+    <div id="principal">
+        <h1 id="relogio" class="relogio"> 20:00 </h1>
+    </div>
+
+    <script>
+        //Status pomodoro = ['naoiniciado', '20minutos', '5minutos']
+        var controlePomodoro = 'naoiniciado'
+        var minutoAtual = 20
+        var segundoAtual = 0 
+        var complementoSegundo = ''
+        var complementoMinuto = ''
+
+        function atualizarMomento () {
+            segundoAtual--
+            if (segundoAtual < 10) {
+                complementoSegundo = '0'
+            } else {
+                complementoSegundo = ''
+            }
+            if (minutoAtual < 10) {
+                complementoMinuto = '0'
+            } else {
+                complementoMinuto = ''
+            }
+            document.getElementById('relogio').textContent = complementoMinuto +
+             minutoAtual + ':' + complementoSegundo + segundoAtual
+            if (segundoAtual === 0) {
+                minutoAtual--
+                segundoAtual = 59
+            }
+            if (minutoAtual === 0 && segundoAtual === 0) {
+                clearInterval(passador)
+            }
+        }
+
+        let passador = setInterval( atualizarMomento, 1000 )
+    </script>
 
 </body>
 </html>
