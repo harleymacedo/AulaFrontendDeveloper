@@ -17,8 +17,8 @@
     </div>
 
     <div id="controles">
-        <button>Iniciar</button>
-        <button>Parar</button>
+        <button onclick="iniciar()">Iniciar</button>
+        <button onclick="parar()">Parar</button>
     </div>
 
     <div id="principal">
@@ -28,13 +28,20 @@
     <script>
         //Status pomodoro = ['naoiniciado', '20minutos', '5minutos']
         var controlePomodoro = 'naoiniciado'
-        var minutoAtual = 20
-        var segundoAtual = 0 
+        var minutoAtual = 19
+        var segundoAtual = 60
         var complementoSegundo = ''
         var complementoMinuto = ''
+        var interval1 = null
 
         function atualizarMomento () {
             segundoAtual--
+
+            if (segundoAtual === 0) {
+                minutoAtual--
+                segundoAtual = 59
+            }
+
             if (segundoAtual < 10) {
                 complementoSegundo = '0'
             } else {
@@ -45,18 +52,23 @@
             } else {
                 complementoMinuto = ''
             }
-            document.getElementById('relogio').textContent = complementoMinuto +
-             minutoAtual + ':' + complementoSegundo + segundoAtual
-            if (segundoAtual === 0) {
-                minutoAtual--
-                segundoAtual = 59
-            }
+
             if (minutoAtual === 0 && segundoAtual === 0) {
-                clearInterval(passador)
+                clearInterval(interval1)
             }
+
+            document.getElementById('relogio').textContent = complementoMinuto + minutoAtual + ':' + complementoSegundo + segundoAtual
+            
         }
 
-        let passador = setInterval( atualizarMomento, 1000 )
+        function iniciar() {
+            interval1 = setInterval( atualizarMomento, 1000 )
+        }
+
+        function parar() {
+            clearInterval(interval1)
+        }
+        
     </script>
 
 </body>
