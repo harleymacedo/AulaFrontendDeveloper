@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex20TemporizadorPomodoro</title>
 </head>
+
 <body>
 
     <div id="cabecalho">
@@ -19,6 +21,9 @@
     <div id="controles">
         <button onclick="iniciar()">Iniciar</button>
         <button onclick="parar()">Parar</button>
+        <audio id="audio1" src="./recursos/musica1.mp3">
+            O seu navegador não suporta o elemento <code>audio</code>.
+        </audio>
     </div>
 
     <div id="principal">
@@ -34,7 +39,7 @@
         var complementoMinuto = ''
         var interval1 = null
 
-        function atualizarMomento () {
+        function atualizarMomento() {
             segundoAtual--
 
             if (segundoAtual === 0) {
@@ -58,18 +63,21 @@
             }
 
             document.getElementById('relogio').textContent = complementoMinuto + minutoAtual + ':' + complementoSegundo + segundoAtual
-            
+
         }
 
         function iniciar() {
-            interval1 = setInterval( atualizarMomento, 1000 )
+            interval1 = setInterval(atualizarMomento, 1000)
+            document.getElementById('audio1').play()
         }
 
         function parar() {
             clearInterval(interval1)
+            document.getElementById('audio1').pause()
         }
-        
+
     </script>
 
 </body>
+
 </html>
