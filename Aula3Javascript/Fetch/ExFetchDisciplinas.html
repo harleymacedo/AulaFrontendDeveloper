@@ -17,9 +17,10 @@
 <body>
     <h3>Listagem de disciplinas do IFCE</h3>
     <button onclick="listar()">Listar</button>
+    <button onclick="inserir()">Inserir</button>
     <div id="divResultado"></div>
     <script>
-        async function listar () {
+        async function listar() {
             let url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina/todas'
             let resultado = await fetch(url)
             let resFormatado = await resultado.json()
@@ -29,6 +30,17 @@
                 novoDivCard.innerHTML = elemento.nome
                 document.getElementById('divResultado').append(novoDivCard)
             })
+        }
+
+        async function inserir() {
+            let url = 'https://aula-backend-developer-fc7o.vercel.app/disciplina'
+            let resultado = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify({'nome': 'LabNovo8', 'capacidade': 20, 'descricao': 'Descricao8'}),
+                headers: {'Content-type': 'application/json;charset=UTF-8'}
+            })
+            let resultadoFormatado = await resultado.json()
+            document.getElementById('divResultado').textContent = resultadoFormatado.mensagem
         }
     </script>
 </body>
