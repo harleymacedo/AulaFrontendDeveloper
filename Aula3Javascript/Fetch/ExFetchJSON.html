@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>CH práticas das disciplinas</h4>
+    <button onclick="inserir()" >Listar</button>
+    <div id="divResultado"> </div>
+
+    <script>
+        async function inserir() {
+            let disciplinasNovas = [
+                {
+                    "codigo": "Cod10",
+                    "nome": "Nome10",
+                    "cargaHoraria": {"chTeorica": 10, "chPratica": 30}
+                }, 
+                {
+                    "codigo": "Cod11",
+                    "nome": "Nome11",
+                    "cargaHoraria": {"chTeorica": 10, "chPratica": 30}
+                },
+                {
+                    "codigo": "Cod12",
+                    "nome": "Nome12",
+                    "cargaHoraria": {"chTeorica": 10, "chPratica": 30}
+                },
+            ]
+            disciplinasNovas.forEach( (disciplina) => {
+                let div = document.getElementById('divResultado')
+                div.innerHTML += `<li>Disci: ${disciplina.codigo} ; CH prática: ${disciplina.cargaHoraria.chPratica} </li>`
+            })
+        }
+    </script>
+</body>
+</html>
