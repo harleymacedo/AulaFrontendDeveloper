@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Conversor from './Conversor'
+import BuscaCep from './BuscaCep'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +10,8 @@ function App() {
     <>
       <Conversor moedaOrigem='USD' moedaDestino='BRL' cor='lightblue' />
       <Conversor moedaOrigem='EUR' moedaDestino='BRL' cor='yellow' />
+      <Conversor moedaOrigem='BTC' moedaDestino='BRL' cor='green' />
+      <BuscaCep cor="pink" />
     </>
   )
 }
