@@ -11,6 +11,8 @@ function Post (props) {
             <input type='button' value='+ pontos' onClick={ () => {setPontos(pontos + 1)} } />
             <input type='button' value='- pontos' onClick={ () => { if (pontos > 0) setPontos(pontos - 1)} } />
             <h3> {pontos} </h3>
+            <h6> Pontos: {pontos} </h6>
+            <h2> Points: {pontos} </h2>            
         </div>
     )
 }
