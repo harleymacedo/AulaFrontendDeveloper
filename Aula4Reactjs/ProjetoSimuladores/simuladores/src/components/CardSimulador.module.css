@@ -1,0 +1,18 @@
+.divPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 40px;
+    width: 70vw;
+}
+
+.inputText1 {
+    width: 100%;
+    height: 40px;
+    font-size: 16pt;
+    margin: 10px;
+    border: solid 1px silver;
+    border-radius: 4px;
+}

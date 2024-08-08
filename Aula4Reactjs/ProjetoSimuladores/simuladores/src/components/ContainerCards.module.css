@@ -1,0 +1,10 @@
+.divPrincipalCards {
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    align-items: center;
+    height: 800px;
+    border-radius: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
