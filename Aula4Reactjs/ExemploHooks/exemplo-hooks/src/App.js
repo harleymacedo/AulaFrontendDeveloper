@@ -1,6 +1,6 @@
 import './App.css'
 import { createContext } from 'react'
-import Perfil from './components/Perfil'
+import Perfil from './components/hookUseContext/Perfil'
 import ListaRepositorios from './components/hookUseEffect/ListaRepositorios'
 
 export const nivelAtual = createContext(1)
