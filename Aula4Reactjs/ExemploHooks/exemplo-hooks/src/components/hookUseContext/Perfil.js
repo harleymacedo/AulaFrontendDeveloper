@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { nivelAtual } from '../App'
+import { nivelAtual } from '../../App'
 
 const Perfil = () => {
     return (
