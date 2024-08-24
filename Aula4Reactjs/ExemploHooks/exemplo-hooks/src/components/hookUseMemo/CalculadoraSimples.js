@@ -18,13 +18,13 @@ const CalculadoraSimples = () => {
     }
 
     const somar = async () => {
-        setTimeout( () => {console.log('Chamou somar')}, 1000)
+        //setTimeout( () => {console.log('Chamou somar')}, 1000)
         setResultado(numero1 + numero2)
     }
 
     const resultadoMemoizado = useMemo( () => {
-        numero1 + numero2
-    }
+        return numero1 + numero2
+    })
 
     return (
         <div>
