@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <Perfil />
-            <ListaRepositorios />
+            {/* <ListaRepositorios /> */}
             <ControleForm />
             <CalculadoraSimples />
         </div>

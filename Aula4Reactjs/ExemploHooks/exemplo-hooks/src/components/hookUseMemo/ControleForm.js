@@ -29,7 +29,7 @@ const ControleForm = () => {
         );
     }
 
-    const memoizedErrors = useMemo(() => <Errors active={showErrors} />, [showErrors]);
+    const memoizedErrors = useMemo( () => <Errors active={showErrors} />, [showErrors]);
 
     return (
         <form>

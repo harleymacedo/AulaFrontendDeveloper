@@ -17,14 +17,10 @@ const CalculadoraSimples = () => {
         setNumero2(valor)
     }
 
-    const somar = async () => {
-        //setTimeout( () => {console.log('Chamou somar')}, 1000)
+    const somar = useMemo( () => {
         setResultado(numero1 + numero2)
-    }
-
-    const resultadoMemoizado = useMemo( () => {
-        return numero1 + numero2
-    })
+        console.log('Executou o somar')
+    }, [numero1, numero2] )
 
     return (
         <div>
@@ -32,7 +28,7 @@ const CalculadoraSimples = () => {
             <input type='number' placeholder='Numero 1' onChange={atualizarNumero1} />
             <input type='number' placeholder='Numero 2' onChange={atualizarNumero2} />
             <input type='button' value='Somar' onClick={somar} />
-            <p>Resultado: {resultadoMemoizado} </p>
+            <p>Resultado: {resultado} </p>
         </div>
     )
 }
