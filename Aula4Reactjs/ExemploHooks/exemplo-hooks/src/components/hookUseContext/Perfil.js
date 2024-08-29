@@ -1,11 +1,14 @@
 import { useContext } from 'react'
-import { nivelAtual } from '../../App'
+import { AppContext } from '../../App'
 
 const Perfil = () => {
+
+    const {setNivel} = useContext(AppContext)
+
     return (
         <div>
             <h2>Tela de Perfil</h2>
-            <h3>Nível atual: {useContext(nivelAtual)} </h3>
+            <button onClick={ () => {setNivel(2)} } >Mudar nível</button>
         </div>
     )
 }

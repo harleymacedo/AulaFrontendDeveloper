@@ -24,7 +24,7 @@ const BuscaFrete = (props) => {
 
     return (
         <View>
-            <Text>Busca de frete</Text>
+            <Text style={{color: props.cor}}>Busca de frete</Text>
             <TextInput placeholder='Digite o CEP' onChangeText={ atualizarCep } />
             <Button title='Calcular' onPress={ () => { exibirMensagem() }} />
             <Text> Cep: {cep} </Text>
