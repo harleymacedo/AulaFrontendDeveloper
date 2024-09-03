@@ -6,7 +6,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <Text>App 2 - Aula React Native</Text>
-            <Configuracoes userName='Harley' />
+            <Configuracoes userName='Harley' cor= 'green' tamanho={26} />
             <StatusBar style="auto" />
         </View>
     );

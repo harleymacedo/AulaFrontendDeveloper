@@ -4,7 +4,7 @@ import {Button, SafeAreaView, Text} from 'react-native'
 export default function Home ({navigation}) {
 
     function irParaHabilidades () {
-        navigation.navigate('Habilidades')
+        navigation.navigate('Habilidades', {'usuario': 'Harley'})
     }
 
     function irParaGrupoEstudo () {

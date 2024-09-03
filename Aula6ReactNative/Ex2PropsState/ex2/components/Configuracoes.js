@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity, Alert, Switch} from 'react-native'
+import {View, Text, TouchableOpacity, Alert, Switch, StyleSheet} from 'react-native'
 
 const Configuracoes = (props) => {
 
@@ -8,7 +8,9 @@ const Configuracoes = (props) => {
 
     return (
         <View>
-            <Text> Tela de Configurações </Text>
+            <Text style={{'color': props.cor, fontSize: props.tamanho}}>
+                Tela de Configurações 
+            </Text>
             <TouchableOpacity onPress={mensagem}> 
                 <Text>Mensagem</Text> 
             </TouchableOpacity>
@@ -18,3 +20,10 @@ const Configuracoes = (props) => {
 }
 
 export default Configuracoes
+
+const styles = StyleSheet.create({
+    texto1: {
+        fontSize: 22,
+        fontFamily: 'Verdana',
+    }
+})
