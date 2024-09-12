@@ -5,8 +5,7 @@ import BuscaFrete from './components/BuscaFrete'
 export default function App() {
     return (
         <SafeAreaView>
-            <BuscaFrete cor='green' tipo="detalhado" />
-            <StatusBar style="auto" />
+            <BuscaFrete cor='green' tipo="detalhado" />            
         </SafeAreaView>
     )
 }
