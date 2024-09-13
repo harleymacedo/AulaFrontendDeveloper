@@ -1,7 +1,7 @@
 import {View, Text, Alert, TouchableOpacity, Button, StyleSheet, TextInput} from 'react-native'
 import {useState} from 'react'
 
-export default function Login () {
+export default function Login (props) {
 
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -24,7 +24,7 @@ export default function Login () {
     }
 
     return (
-        <View style={styles.containerLogin}>
+        <View style={[styles.containerLogin, {backgroundColor: props.cor}]}>
             <Text style={styles.texto1} >Login no App</Text>
             <Button 
                 title='Cadastrar agora'                

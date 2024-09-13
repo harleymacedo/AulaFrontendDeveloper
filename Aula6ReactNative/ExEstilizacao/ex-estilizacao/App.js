@@ -6,7 +6,7 @@ export default function App() {
         <SafeAreaView style={styles.container}>
             <Text style={styles.texto1} >Grupos de Estudo</Text>
             <Image source={require('./assets/negocios-100.png')} />
-            <Login />
+            <Login cor='#d2a679' />
         </SafeAreaView>
     );
 }
