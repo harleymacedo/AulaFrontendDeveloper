@@ -5,15 +5,19 @@ import dayjs from 'dayjs'
 
 export default function Evento() {
 
-    const [date, setDate] = useState(dayjs());
+    const [data, setData] = useState(dayjs());
+
+    const atualizarData = (params) => {
+        setDate(params.date)
+    }
     
     return (
         <View>
             <Text>Novo evento</Text>
             <DateTimePicker
                 mode="single"
-                date={date}
-                onChange={(params) => setDate(params.date)}
+                date={data}
+                onChange={atualizarData}
             />
         </View>
     )
