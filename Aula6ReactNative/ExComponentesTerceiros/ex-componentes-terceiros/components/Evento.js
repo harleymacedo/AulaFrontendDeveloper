@@ -1,14 +1,19 @@
 import { View, Text, StyleSheet } from 'react-native'
-import Calendar from 'react-native-calendars'
+import DateTimePicker from 'react-native-ui-datepicker'
+import { useState } from 'react'
+import dayjs from 'dayjs'
 
 export default function Evento() {
+
+    const [date, setDate] = useState(dayjs());
+    
     return (
         <View>
             <Text>Novo evento</Text>
-            <Calendar
-                onDayPress={day => {
-                    console.log('selected day', day);
-                }}
+            <DateTimePicker
+                mode="single"
+                date={date}
+                onChange={(params) => setDate(params.date)}
             />
         </View>
     )
