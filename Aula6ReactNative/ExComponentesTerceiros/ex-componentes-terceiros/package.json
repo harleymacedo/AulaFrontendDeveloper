@@ -15,7 +15,8 @@
     "react-native": "0.74.5",
     "react-native-calendars": "^1.1306.0",
     "react-native-maps": "^1.18.0",
-    "react-native-ui-datepicker": "^2.0.4"
+    "react-native-ui-datepicker": "^2.0.4",
+    "react-native-video": "^6.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
