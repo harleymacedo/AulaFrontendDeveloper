@@ -66,5 +66,15 @@
     <ol>
         <li>Usabilidade</li>
         <li>Figma</li>
+        <li>Exemplo de Protótipo</li>
+    </ol>
+    <li>Aula 8: Web e IoT</li>
+    <ol>
+        <li>Conceitos</li>
+        <li>Redes 5G</li>
+        <li>Prototipagem de sistemas eletrônicos</li>
+        <li>ESP</li>
+        <li>Sensores e atuadores</li>
+        <li>Exemplo de sistema eletrônico</li>
     </ol>
 </ul>
