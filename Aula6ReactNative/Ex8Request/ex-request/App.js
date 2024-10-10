@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import LoginScreen from './LoginScreen'
-import HomeScreen from './HomeScreen'
+import LoginScreen from './components/LoginScreen'
+import HomeScreen from './components/HomeScreen'
 
 const Stack = createNativeStackNavigator()
 
