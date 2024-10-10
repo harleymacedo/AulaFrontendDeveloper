@@ -10,8 +10,7 @@
 <h3>Assuntos abordados</h3>
 <ol>
     <li>Aula 1: HTML</li>
-    <ol>
-        <li>Estrutura de uma página</li>
+    <ol>    
         <li>Tags principais</li>
         <li>Tags e atributos no HTML5</li>
     </ol>
