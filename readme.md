@@ -47,19 +47,20 @@
     </ol>
     <li>Aula 5: Deploy e versionamento</li>
     <ol>
-        <li>Git e Github</li>
-        <li>Serviços de nuvem com Heroku</li>
+        <li>Git e Github</li>        
         <li>Serviços de nuvem com Vercel</li>
         <li>Monitoramento de sistemas</li>          
     </ol>
     <li>Aula 6: React Native</li>
     <ol>
-        <li>Conceitos</li>
         <li>Componentes</li>
-        <li>React Hooks</li>
+        <li>Props e State</li>        
         <li>Eventos</li>
-        <li>Câmera</li>
-        <li>Localização</li>
+        <li>Core components</li>
+        <li>Componentes de Terceiros</li>
+        <li>Estilização</li>
+        <li>Navegação</li>
+        <li>Request</li>
     </ol>
     <li>Aula 7: Prototipagem</li>
     <ol>
