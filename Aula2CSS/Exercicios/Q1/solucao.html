@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .principal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('./fundo.jpg');
+            background-size: cover;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        .esquerda {
+            width: 40%;
+        }
+        .direita {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;      
+            padding: 10px;      
+        }
+        input {
+            width: 380px;
+            height: 30px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .titulo1 {
+            font-size: 48pt;
+        }
+        .p1 {
+            font-size: 18pt;
+        }
+        .form1 {
+            border: 1px solid white;
+        }
+        .button1 {
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 14pt;
+            height: 40px;
+            border: 2px solid blue;
+        }
+        .link1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="esquerda">
+            <h2 class="titulo1">Bem vindo ao Sistema de Grupos de Estudo</h2>
+            <p class="p1">Encontre grupos para buscar objetivos em conjunto, realizar reuniões, trocar materiais e muitas outras interações.</p>
+        </div>
+        <div class="direita form1">  
+            <h2>Cadastre agora</h2>
+            <input type="text" placeholder="Nome" />
+            <input type="text" placeholder="Email" />
+            <input type="password" placeholder="Senha" />
+            <input class="button1" type="button" value="Cadastrar" />
+            <a class="link1" href="#">Já tem login? Entrar</a>
+        </div>
+    </div>
+</body>
+</html>
