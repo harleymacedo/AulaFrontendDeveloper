@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border-style: solid;
+            border-width: 1px;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: #0000ff;
+            -webkit-transition:
+                width 2s,
+                height 2s,
+                background-color 2s,
+                -webkit-transform 2s;
+            transition:
+                width 2s,
+                height 2s,
+                background-color 2s,
+                transform 2s;
+        }
+
+        .box:hover {
+            background-color: #ffcccc;
+            width: 200px;
+            height: 200px;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        The box below combines transitions for: width, height, background-color,
+        transform. Hover over the box to see these properties animated.
+    </p>
+    <div class="box">Sample</div>
+</body>
+
+</html>
