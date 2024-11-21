@@ -7,12 +7,16 @@
 </head>
 <body>
     <h2 id="titulo1">Nome do grupo:</h2>
-    <input type="button" value="Alterar" onclick="alterar()" />
+    <input id="b1" type="button" value="Alterar" onclick="alterar()" />
 
     <script>
         function alterar() {
             var tag1 = document.getElementById('titulo1')
             tag1.contentEditable = true
+            var tag2 = document.getElementById('b1')
+            tag2.type = 'text'
+            tag1.style.backgroundColor = '#591'
+            tag1.innerHTML = '<a href="#">Novo conteudo</a>' 
         }
     </script>
 </body>

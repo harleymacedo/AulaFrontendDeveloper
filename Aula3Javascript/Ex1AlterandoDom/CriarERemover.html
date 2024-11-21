@@ -18,6 +18,7 @@
     function adicionarElemento() {
       let novoElemento = document.createElement("p");
       novoElemento.textContent = "Novo paragrafo";
+      novoElemento.contentEditable = true
       document.getElementById("div1").appendChild(novoElemento);
     }
 
