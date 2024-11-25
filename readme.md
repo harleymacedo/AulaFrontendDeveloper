@@ -28,9 +28,12 @@
     <li>Aula 3: Javascript</li>
     <ol>
         <li>Estrutura de script</li>
-        <li>Variáveis</li>
-        <li>Estrutura DOM</li>
+        <li>Alterando o DOM</li>
+        <li>Eventos</li>
+        <li>Funções</li>
         <li>Comando Fetch</li>
+        <li>Cookies e Local Storage</li>
+        <li>Geolocation</li>
     </ol>
     <li>Aula 4: Reactjs</li>
     <ol>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Estrutura de repetição</p>
+    <script>
+        //Estrutura for
+        for (let i = 1; i <= 10; i++) {
+            console.log(i)
+        }
+
+        //Estrutura for in
+        let usuario = {
+            nome: 'Ana',
+            email: 'ana@servidor.com',
+            cidade: 'Crato'
+        }
+        for (const atributo in usuario) {
+            console.log(atributo, usuario[atributo])
+        }
+
+        //Estrutura forEach
+        let opcoes = ['a', 'b', 'c']
+        opcoes.forEach( function (elemento, indice) {
+            console.log(elemento, indice)
+        })
+
+        //Estrutura while
+        let j = 1
+        let resultado = 1
+        while (j <= 5) {
+            resultado = resultado * j
+            j++
+        }
+        console.log(resultado)
+
+        //Estrutura do while
+        let z = 1
+        do {
+            console.log(z)
+        } while (z < 1)
+
+    </script>
+</body>
+
+</html>
