@@ -1,0 +1,3 @@
+Crie um página com HTML e Javascript que contenha/faça:
+. Um botão chamado 'Adicionar Nota', que quando clicado adiciona um div na página
+. 

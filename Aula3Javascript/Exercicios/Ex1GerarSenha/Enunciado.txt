@@ -1,0 +1,6 @@
+Criar uma página com HTMl e Javascript que contenha/faça:
+. Um parágrafo com o texto 'Gerar sugestão de senha'
+. Um botão chamado 'Gerar'
+. Ao clicar em Gerar, deve-se gerar uma senha aleatória de 8 caracteres
+. Os caracteres a serem sorteados estão em um array que contêm as 5 vogais e os números de 1 até 5
+. A senha gerada pode ter caracteres repetidos
