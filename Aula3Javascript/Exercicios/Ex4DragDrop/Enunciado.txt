@@ -1,0 +1,4 @@
+Crie o código que tenha/faça:
+. Uma área que possa arrastar arquivos para serem enviados ao servidor
+. Um botão de enviar o arquivo
+. Uma barra de progresso para dar feedback sobre o envio do arquivo
