@@ -16,20 +16,13 @@
             document.cookie = 'username='
         }
 
-        function getCookie(cname) {
-            let name = cname + "="
+        function getCookie(cname) {            
             let decodedCookie = decodeURIComponent(document.cookie)
-            let ca = decodedCookie.split(';')
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i]
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1)
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length)
-                }
-            }
-            return ""
+                .split('; ')
+                .find(row => row.startsWith('username='))
+                .split('=')[1];
+
+            return decodedCookie
         }
     </script>
 </head>

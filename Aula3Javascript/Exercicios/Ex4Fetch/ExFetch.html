@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lista de repositórios</p>
+    <input type="text" name="usuario" id="usuario" />
+    <input type="button" value="Buscar" onclick="buscar()" />
+    <div id="div1">
+
+    </div>
+    <script>
+        async function buscar() {
+            try {
+                const usuario = document.getElementById('usuario').value
+                const url = `https://api.github.com/users/${usuario}/repos`
+                const resultado = await fetch(url)
+                const resultadoFormatado = await resultado.json()
+                resultadoFormatado.forEach(function (elemento) {
+                    document.getElementById('div1').innerHTML += '<button >' + elemento.name + '</button>'
+                })
+            } catch (error) {
+                document.getElementById('div1').innerHTML = '<p>Não foi possível obter os repos</p>'
+                console.log(error.message)
+            }
+
+        }
+    </script>
+</body>
+</html>
