@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Com callback e informação</p>
+    <script>
+        //Funções com Callback
+        function geraPDF (callBack) {
+            setTimeout(function () {
+                console.log('Gerando PDF...')
+                let info = ' PDF abcd. '
+                if (callBack) { callBack(info) }
+            }, 4000);
+        }
+        function enviaEmail (info) {
+            setTimeout(function () {
+                console.log('Anexando pdf.' + info)
+                console.log('Enviando email...')
+            }, 1000)
+        }
+
+        //Mantém o sincronismo
+        geraPDF(enviaEmail)
+    </script>
+</body>
+
+</html>
