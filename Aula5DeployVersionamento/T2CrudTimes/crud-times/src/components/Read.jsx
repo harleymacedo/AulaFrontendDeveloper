@@ -10,10 +10,11 @@ function Read () {
 
     async function listar () {
         try {
-            const url = 'https://api-times-n6k0vvvb5-harleyipgmailcoms-projects.vercel.app/time/todos'
-            const result = await fetch(url)            
-            console.log(result.times)
-            setTimes(result.times)
+            const url = 'https://aula-backend-developer.vercel.app/time/todos'            
+            const result = await fetch(url, {method: 'GET'})            
+            const dados = await result.json()
+            console.log(dados.times)
+            setTimes(dados.times)
         } catch (error) {
             console.log(error)
             setAviso('Times não encontrados')
