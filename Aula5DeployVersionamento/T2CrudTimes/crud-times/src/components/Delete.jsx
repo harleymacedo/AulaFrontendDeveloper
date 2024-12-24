@@ -1,3 +1,4 @@
+import './Delete.css'
 
 function Delete () {
     return (

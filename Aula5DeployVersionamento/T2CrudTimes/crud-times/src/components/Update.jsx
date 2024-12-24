@@ -1,3 +1,5 @@
+import './Update.css'
+
 import { useState } from 'react'
 
 function Update () {
