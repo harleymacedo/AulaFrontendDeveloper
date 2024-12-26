@@ -11,7 +11,7 @@ function Create () {
 
     async function cadastrar () {
         try {
-            const url = 'https://api-times-n6k0vvvb5-harleyipgmailcoms-projects.vercel.app/time'
+            const url = 'https://api-times-n6k0vvvb5-harleyipgmailcoms-projects.vercel.app/time/inserir'
             await fetch(url, {
                 method: 'POST',
                 headers: {
