@@ -29,6 +29,20 @@ const BuscaFrete = (props) => {
         Alert.alert('Até agora temos o cep:' + cep)
     }
 
+    async function buscar () {
+        try {
+            const url = ''
+            const resultado = await fetch(url, {
+                method: 'GET',
+                headers: {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                }
+            })
+        } catch (error) {
+            
+        }
+    }
+
     const mudarTema = () => {
         if (valueSwitch) {
             setCorFundo('#681')
