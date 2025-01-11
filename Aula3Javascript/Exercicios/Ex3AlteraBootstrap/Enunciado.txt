@@ -1,4 +1,4 @@
 Crie um página que tenha/faça:
-. Ter uma tabela estilizadao com Bootstrap
+. Ter uma tabela estilizada com Bootstrap
 . Ter um botão chamado dark, que altera o estilo da tabela para 'table table-dark'
 . Ter um botão chamado light, que altera o estili da tabela para 'table table light'
