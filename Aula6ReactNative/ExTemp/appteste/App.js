@@ -7,6 +7,7 @@ export default function App() {
       <Text>App Teste aula</Text>
       <StatusBar style="auto" />
     </View>
+    
   );
 }
 
