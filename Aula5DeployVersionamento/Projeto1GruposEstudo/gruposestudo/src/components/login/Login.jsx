@@ -8,15 +8,19 @@ export default function Login () {
             </div>
             <div className='loginForm'>
                 <form>
-                    <div>
-                        <label>Nome de Usuário:</label>
-                        <input type="text" id="username" name="username" required />
+                    <div className='divForm'>
+                        <div className='divFilds'>
+                            <label>Nome de Usuário:</label>
+                            <input type="text" id="username" name="username" required />
+                        </div>
+                        <div className='divFilds'>
+                            <label>Senha:</label>
+                            <input type="password" id="password" name="password" required />
+                        </div>
+                        <div className='divSenha'>
+                            <button type="submit">Entrar</button>
+                        </div>
                     </div>
-                    <div>
-                        <label>Senha:</label>
-                        <input type="password" id="password" name="password" required />
-                    </div>
-                    <button type="submit">Entrar</button>
                 </form>
             </div>
         </div>
