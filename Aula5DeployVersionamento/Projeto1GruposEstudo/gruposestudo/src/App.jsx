@@ -1,4 +1,5 @@
 import Login from './components/login/Login'
+import Grupo from './components/grupo/Grupo'
 import './App.css'
 
 function App() {    
@@ -10,6 +11,7 @@ function App() {
             </div>
             <div className='appBody'>
                 <Login /> 
+                <Grupo />
             </div>      
             <div className='appFooter'>
                 <p>Desenvolvido por: <a href='https://harleymacedo.com.br'>Harley Macêdo</a></p>
