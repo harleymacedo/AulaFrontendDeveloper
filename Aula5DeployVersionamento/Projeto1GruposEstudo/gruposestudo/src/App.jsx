@@ -1,5 +1,4 @@
 import Login from './components/login/Login'
-import Grupo from './components/grupo/Grupo'
 import './App.css'
 
 function App() {    
@@ -10,8 +9,7 @@ function App() {
                 <h1>Grupos de Estudo</h1>
             </div>
             <div className='appBody'>
-                <Login /> 
-                <Grupo />
+                <Login />                 
             </div>      
             <div className='appFooter'>
                 <p>Desenvolvido por: <a href='https://harleymacedo.com.br'>Harley Macêdo</a></p>
