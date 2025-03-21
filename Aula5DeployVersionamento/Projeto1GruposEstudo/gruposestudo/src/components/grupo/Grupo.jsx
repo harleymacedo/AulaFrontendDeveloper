@@ -1,9 +1,11 @@
 import './Grupo.css'
+import Navbar from '../navbar/Navbar'
 
 export default function Grupo() {
     return (
         <div className='grupoDiv'>
             <div className='grupoHeader'>
+                <Navbar />
                 <h2>Grupo de Estudo</h2>
             </div>
             <div className='grupoForm'>

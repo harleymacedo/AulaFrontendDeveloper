@@ -1,19 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css' // Optional: If you want to add styles for the Navbar
+import './Navbar.css'
 
 export default function Navbar () {
     return (
         <nav className="navbar">
             <ul>
                 <li>
-                    <Link to="/">Aluno</Link>
+                    <Link to="/">Login</Link>
+                </li>  
+                <li>
+                    <Link to="/aluno">Aluno</Link>
                 </li>               
                 <li>
-                    <Link to="/about">Grupo</Link>
+                    <Link to="/grupo">Grupo</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Sair</Link>
+                    <Link to="/logout">Sair</Link>
                 </li>
             </ul>
         </nav>
