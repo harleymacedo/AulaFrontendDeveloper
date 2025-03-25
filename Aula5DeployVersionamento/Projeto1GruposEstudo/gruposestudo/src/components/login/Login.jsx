@@ -7,7 +7,7 @@ export default function Login () {
                 <h2>Login no Sistema</h2>
             </div>
             <div className='loginForm'>
-                <form>
+                <form action="/logar" method="post">
                     <div className='divForm'>
                         <div className='divFilds'>
                             <label>Nome de Usuário:</label>
@@ -18,7 +18,7 @@ export default function Login () {
                             <input type="password" id="password" name="password" required />
                         </div>
                         <div className='divSenha'>
-                            <button type="submit">Entrar</button>
+                            <a href='/Grupo'><button type="button">Entrar</button></a>
                         </div>
                     </div>
                 </form>

@@ -4,21 +4,16 @@ import './Navbar.css'
 
 export default function Navbar () {
     return (
-        <nav className="navbar">
-            <ul>
-                <li>
-                    <Link to="/">Login</Link>
-                </li>  
-                <li>
-                    <Link to="/aluno">Aluno</Link>
-                </li>               
-                <li>
-                    <Link to="/grupo">Grupo</Link>
-                </li>
-                <li>
-                    <Link to="/logout">Sair</Link>
-                </li>
-            </ul>
+        <nav className="navbar">                            
+            <button>
+                <Link to="/aluno">Aluno</Link>
+            </button>               
+            <button>
+                <Link to="/grupo">Grupo</Link>
+            </button>
+            <button>
+                <Link to="/">Sair</Link>
+            </button>            
         </nav>
     )
 }
