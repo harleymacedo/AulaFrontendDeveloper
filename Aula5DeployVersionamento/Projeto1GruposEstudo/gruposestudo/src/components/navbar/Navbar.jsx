@@ -12,6 +12,9 @@ export default function Navbar () {
                 <Link to="/grupo">Grupo</Link>
             </button>
             <button>
+                <Link to="/evento">Evento</Link>
+            </button>
+            <button>
                 <Link to="/">Sair</Link>
             </button>            
         </nav>

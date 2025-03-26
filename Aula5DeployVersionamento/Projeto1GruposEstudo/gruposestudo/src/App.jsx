@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './components/login/Login.jsx'
 import Grupo from './components/grupo/Grupo.jsx'
 import Aluno from './components/aluno/Aluno.jsx'
+import Evento from './components/evento/Evento.jsx'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                     <Route path='/' element={<Login />} />
                     <Route path='/grupo' element={<Grupo />} />
                     <Route path='/aluno' element={<Aluno />} />
+                    <Route path='/evento' element={<Evento />} />
                 </Routes>
             </div>
             <div className='appFooter'>
