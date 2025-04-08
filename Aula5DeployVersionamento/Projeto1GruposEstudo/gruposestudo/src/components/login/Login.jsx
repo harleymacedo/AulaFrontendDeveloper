@@ -1,4 +1,5 @@
 import './Login.css'
+import Button from 'react-bootstrap/Button'
 
 export default function Login () {
     return (
@@ -18,7 +19,7 @@ export default function Login () {
                             <input type="password" id="password" name="password" required />
                         </div>
                         <div className='divSenha'>
-                            <a href='/Grupo'><button type="button">Entrar</button></a>
+                            <a href='/Grupo'> <Button variant='Primary'> Entrar </Button> </a>
                         </div>
                     </div>
                 </form>
