@@ -1,3 +1,4 @@
 Crie um página com HTML e Javascript que contenha/faça:
 . Um botão chamado 'Adicionar Nota', que quando clicado adiciona um div na página
-. 
+. A div criada deve ter uma cor de fundo sorteada entre as cores 'red', 'green', 'yellow', 'silver', 'gray', 'orange'
+. A div deve ter seu conteúdo editável

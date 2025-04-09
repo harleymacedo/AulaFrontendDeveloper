@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Função que retorna uma promise
+        const algoDemorado = () => {
+            return new Promise( (resolve) => {
+                setTimeout( () => resolve('Algo demorado feito'), 3000)
+            });
+        }
+
+        //Função com async/await
+        const chamaAlgoDemorado = async () => {
+            console.log('Antes')
+            console.log(await algoDemorado())
+            console.log('Depois')
+        }
+        chamaAlgoDemorado()
+    </script>
+</body>
+</html>
