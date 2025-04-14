@@ -17,12 +17,20 @@
         }
 
         function getCookie(cname) {            
+            let name = cname + '='
             let decodedCookie = decodeURIComponent(document.cookie)
-                .split('; ')
-                .find(row => row.startsWith('username='))
-                .split('=')[1];
+            let ca = decodedCookie.split(';')
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i]
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1)
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length)
+                }
+            }
 
-            return decodedCookie
+            return ''
         }
     </script>
 </head>

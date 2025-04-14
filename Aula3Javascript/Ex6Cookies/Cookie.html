@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Cookies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    input, button {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Teste de Cookies</h1>
+
+  <label for="cookieName">Nome do cookie:</label><br>
+  <input type="text" id="cookieName" placeholder="ex: usuario"><br>
+
+  <label for="cookieValue">Valor do cookie:</label><br>
+  <input type="text" id="cookieValue" placeholder="ex: João"><br>
+
+  <button onclick="criarCookie()">Criar Cookie</button>
+  <button onclick="lerCookie()">Ler Cookie</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function criarCookie() {
+      const nome = document.getElementById("cookieName").value;
+      const valor = document.getElementById("cookieValue").value;
+
+      if (nome && valor) {
+        document.cookie = `${nome}=${valor}; path=/; max-age=3600`; // expira em 1 hora
+        document.getElementById("resultado").textContent = `Cookie "${nome}" criado com sucesso!`;
+      } else {
+        document.getElementById("resultado").textContent = "Por favor, preencha nome e valor.";
+      }
+    }
+
+    function lerCookie() {
+      const nome = document.getElementById("cookieName").value;
+      const cookies = document.cookie.split("; ");
+
+      for (let c of cookies) {
+        const [chave, valor] = c.split("=");
+        if (chave === nome) {
+          document.getElementById("resultado").textContent = `Valor do cookie "${nome}": ${valor}`;
+          return;
+        }
+      }
+
+      document.getElementById("resultado").textContent = `Cookie "${nome}" não encontrado.`;
+    }
+  </script>
+</body>
+</html>
