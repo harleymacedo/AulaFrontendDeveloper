@@ -1,6 +1,15 @@
 import { View, Text, StyleSheet } from 'react-native'
+import { useState, useEffect } from 'react'
+
 
 export default function Grupos() {
+
+  useEffect(function () {
+    
+  }, [])
+
+  const [grupos, setGrupos] = useState([])
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Grupos</Text>
