@@ -19,11 +19,14 @@ export default function Grupos() {
   }
 
   const [grupos, setGrupos] = useState([])
+  const [mensagem, setMensagem] = useState('')
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Grupos</Text>
       <Text style={styles.text}>Lista de grupos</Text>
+      {mensagem && <Text style={styles.text}>{mensagem}</Text>}
+      {grupos.length === 0 && <Text style={styles.text}>Nenhum grupo encontrado</Text>}
       {grupos.map((grupo) => (
         <View key={grupo._id} style={styles.container}>
           <Text style={styles.text}>{grupo.nome}</Text>
