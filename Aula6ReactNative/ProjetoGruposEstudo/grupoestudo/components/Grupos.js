@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Alert } from 'react-native'
 import { useState, useEffect } from 'react'
 
 
@@ -25,7 +25,7 @@ export default function Grupos() {
     <View style={styles.container}>
       <Text style={styles.text}>Grupos</Text>
       <Text style={styles.text}>Lista de grupos</Text>
-      {mensagem && <Text style={styles.text}>{mensagem}</Text>}
+      {mensagem && <Text>{mensagem}</Text>}
       {grupos.length === 0 && <Text style={styles.text}>Nenhum grupo encontrado</Text>}
       {grupos.map((grupo) => (
         <View key={grupo._id} style={styles.container}>
