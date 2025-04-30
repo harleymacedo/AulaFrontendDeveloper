@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch endereço</title>
+</head>
+<body>
+    <input type="text" id="cep" placeholder="Digite o CEP">
+    <button id="btn" onclick="buscarEndereco()">Buscar</button>
+    <div id="resultado"></div>
+
+    <script>
+        async function buscarEndereco() {
+            const cep = document.getElementById('cep').value 
+            const url = `https://cep.awesomeapi.com.br/json/${cep}`
+            const result = await fetch(url)
+            const data = await result.json()
+            const resultadoDiv = document.getElementById('resultado')
+            resultadoDiv.innerHTML = `Endereço: ${data.address} <br>
+                                      Bairro: ${data.district} <br>
+                                      Cidade: ${data.city} <br>
+                                      Estado: ${data.state} <br>`
+            console.log(data)
+        }
+    </script>
+</body>
+</html>
