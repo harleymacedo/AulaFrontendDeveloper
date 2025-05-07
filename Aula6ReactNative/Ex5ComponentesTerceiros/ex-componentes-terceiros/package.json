@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "expo": "~51.0.28",
+    "expo-linear-gradient": "~13.0.2",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.5",
     "react-native-calendars": "^1.1306.0",
+    "react-native-gifted-charts": "^1.4.61",
     "react-native-maps": "^1.18.0",
+    "react-native-svg": "15.2.0",
     "react-native-ui-datepicker": "^2.0.4",
     "react-native-video": "^6.6.1"
   },
