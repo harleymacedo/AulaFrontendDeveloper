@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Lista from './components/Lista'
 
 function App() {
     const [logado, setLogado] = useState(true)
@@ -22,6 +23,8 @@ function App() {
             {
                 exbirNome()
             }
+            <h3>Lista de produtos</h3>
+            <Lista />
         </div>
     )
 }
