@@ -1,0 +1,5 @@
+Crie uma página HTML que contenha 4 divs, 2 na parte de cima e 2 na parte de baixo.
+O primeiro div, na parte de cima, vai ter uma calculadora, com o mostrador e os botões
+O segundo div, na parte de cima, vai ter um relógio digital, com hora, minuto e segundo
+O terceiro div, na parte de baixo, vai ter um checklist com 4 coisas que preciso fazer no dia: beber 2 litros de água, correr, estudar inglês e cuidar do jardim
+O quarto div, na parte de baixo, vai ter um radio, com 2 opções, tema claro e tema escuro
